@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div>
+      <header class="top">
+        <a href="./index.html">
+          <div class="top__logo">
+            <!-- logo will be there -->
+            <img src="./img/logo.svg" alt="logo" />
+          </div>
+          P
+        </a>
+      </header>
+
+      <!-- dropzone -->
+      <div id="drop-area">
+        <form class="my-form">
+          <p>
+            Upload multiple files with the file dialog or by dragging and
+            dropping images onto the dashed region
+          </p>
+
+          <input
+            type="file"
+            id="fileElem"
+            multiple
+            accept="image/*"
+            onChange="handleFiles(this.files)"
+          />
+
+          <label class="button" for="fileElem">Select some files</label>
+        </form>
+        <progress id="progress-bar" max="100" value="0"></progress>
+        <div id="gallery"></div>
+      </div>
+
+      <!-- statistics -->
+      <div class="statistics-wrapper">
+        <h3 class="statistics-title">Statistics</h3>
+
+        <div class="statistics-container">
+          <div class="firstBox">
+            <div class="divider-space mt">
+              <div class="shortcode-simple-counter">
+                <div class="counter-wrapper">
+                  <div class="counter-icon color-main">
+                    <img
+                      src="http://webdesign-finder.com/skymax-demo/brobit/wp-content/uploads/2019/03/counter_icon_1.png"
+                      alt="4497"
+                    />
+                  </div>
+                  <div id="first" class="item">
+                    <div class="countdoun">
+                      <div id="number1">0</div>
+                      <h6>
+                        Registered<br />
+                        Users
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="secondBox">
+            <div class="divider-space mt">
+              <div class="shortcode-simple-counter">
+                <div class="counter-wrapper">
+                  <div class="counter-icon color-main">
+                    <img
+                      src="data:image/png;base64,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"
+                    />
+                  </div>
+                  <div id="second" class="item">
+                    <div class="countdoun">
+                      <div id="number2">0</div>
+                      <h6>
+                        File <br />
+                        Uploads
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="thirdBox">
+            <div class="divider-space mt">
+              <div class="shortcode-simple-counter">
+                <div class="counter-wrapper">
+                  <div class="counter-icon color-main">
+                    <img
+                      src="http://webdesign-finder.com/skymax-demo/brobit/wp-content/uploads/2019/03/counter_icon_4.png"
+                      alt="4507"
+                    />
+                  </div>
+                  <div id="third" class="item">
+                    <div class="countdoun">
+                      <div id="number3">0</div>
+                      <h6>
+                        File <br />
+                        Downloads
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- svg wave uner stats -->
+      <div class="wave-main">
+        <svg
+          id="svgs"
+          viewBox="0 0 1440 400"
+          xmlns="http://www.w3.org/2000/svg"
+          class="transition duration-300 ease-in-out delay-150"
+        >
+          <defs>
+            <linearGradient id="gradie">
+              <stop offset="5%" stop-color="#e100ffff"></stop>
+              <stop offset="95%" stop-color="#7f00ffff"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            d="M 0,400 C 0,400 0,200 0,200 C 199.86666666666667,226.8 399.73333333333335,253.6 559,240 C 718.2666666666667,226.4 836.9333333333334,172.4 977,159 C 1117.0666666666666,145.6 1278.5333333333333,172.8 1440,200 C 1440,200 1440,400 1440,400 Z"
+            stroke="none"
+            stroke-width="0"
+            fill="url(#gradie)"
+            class="transition-all duration-300 ease-in-out delay-150"
+            transform="rotate(-180 720 200)"
+          ></path>
+        </svg>
+      </div>
+
+      <!-- info section -->
+      <div class="app-info-container">
+        <div class="info-card">
+          <div class="card-img-container">
+            <div data-aos="fade-right" class="anim">
+              <lottie-player
+                src="./upload.json"
+                background="transparent"
+                speed="1"
+                style="width: 100%; height: 100%"
+                autoplay
+                loop
+              ></lottie-player>
+            </div>
+          </div>
+
+          <div class="card-details">
+            <span class="card_name">Upload any file type</span>
+            <p class="card_name-para">
+              There are no restrictions on the type of the file you can upload
+              to our free filesharing platform. The only limit we put in place
+              is a 5GB max filesize for free users and up to as much as 100GB
+              for business users. We put our users in control, which is one of
+              the reasons why uploadfiles is in the most popular file sharing
+              sites in the world.
+            </p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="card-img-container">
+            <div data-aos="fade-right" class="anim">
+              <lottie-player
+                src="./share.json"
+                background="transparent"
+                speed="1"
+                style="width: 100%; height: 100%"
+                autoplay
+                loop
+              ></lottie-player>
+            </div>
+          </div>
+
+          <div class="card-details">
+            <span class="card_name">
+              Share files for free, anywhere in the world</span
+            >
+            <p class="card_name-para">
+              Uploadfiles deploys a wide range of data centres located in
+              various regions across the world. This enables us to ensure
+              lightning fast file sharing capabilities to our customers at all
+              times. Whenever you have files for download, or just want to
+              upload and sharem you can rely on us 24/7, 365 days a year
+            </p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="card-img-container">
+            <div data-aos="fade-right" class="anim">
+              <lottie-player
+                src="./security.json"
+                background="transparent"
+                speed="1"
+                style="width: 100%; height: 100%"
+                autoplay
+                loop
+              ></lottie-player>
+            </div>
+          </div>
+
+          <div class="card-details">
+            <span class="card_name">No pop ups, no malware</span>
+            <p class="card_name-para">
+              Fed up of pop-up ads, push notifications, malware, bitcoin miners
+              and ‘quizzes’ that could infect your laptop or desktop with
+              malware? So are we, which is why you will never see any of these
+              on Uploadfiles. Too many file hosting platforms are driven by
+              profit, which means your safety comes a distant second. For us
+              it’s the other way round, giving you the confidence that you can
+              remain safe no matter how long you spend on our file upload site
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- svg wave before footer -->
+      <div class="wave">
+        <svg
+          id="svg"
+          viewBox="0 0 1440 400"
+          xmlns="http://www.w3.org/2000/svg"
+          class="transition duration-300 ease-in-out delay-150"
+        >
+          <defs>
+            <linearGradient id="gradient">
+              <stop offset="5%" stop-color="#7f00ffff"></stop>
+              <stop offset="95%" stop-color="#e100ffff"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            d="M 0,400 C 0,400 0,200 0,200 C 199.86666666666667,226.8 399.73333333333335,253.6 559,240 C 718.2666666666667,226.4 836.9333333333334,172.4 977,159 C 1117.0666666666666,145.6 1278.5333333333333,172.8 1440,200 C 1440,200 1440,400 1440,400 Z"
+            stroke="none"
+            stroke-width="0"
+            fill="url(#gradient)"
+            class="transition-all duration-300 ease-in-out delay-150"
+            transform="rotate(-180 720 200)"
+          ></path>
+        </svg>
+      </div>
+
+      <!-- footer -->
+      <div class="footer-container">
+        <div class="footer-item">
+          <h4 class="footer-title">SUPPORT ME</h4>
+          <p class="footer-para">
+            If you find this service useful for checking DNS propagation, please
+            consider donating to help pay hosting costs and keeping the site up
+            to date.
+          </p>
+
+          <a class="donate" href="">Donate via Paypal</a>
+        </div>
+        <ul class="footer-item ml mr">
+          <li class="footer-list-item footer-title start">DNS TOOLS</li>
+          <li class="footer-list-item">DNS Checker</li>
+          <li class="footer-list-item">
+            <a href="./dns-lookup.html">DNS Lookup</a>
+          </li>
+          <li class="footer-list-item">What's My IP Address</li>
+          <li class="footer-list-item footer-title">DNS GUIDES</li>
+          <li class="footer-list-item">DNS Security</li>
+          <li class="footer-list-item">Flush DNS</li>
+          <li class="footer-list-item">Hosts File</li>
+        </ul>
+
+        <ul class="footer-item mr">
+          <li class="footer-list-item footer-title">DNS LOOKUP</li>
+          <li class="footer-list-item">A Record Lookup</li>
+          <li class="footer-list-item">AAAA Record Lookup</li>
+          <li class="footer-list-item">CAA Record Lookup</li>
+          <li class="footer-list-item">CNAME Record Lookup</li>
+          <li class="footer-list-item">MX Record Lookup</li>
+          <li class="footer-list-item">NS Record Lookup</li>
+          <li class="footer-list-item">PTR Record Lookup</li>
+          <li class="footer-list-item">SOA Record Lookup</li>
+          <li class="footer-list-item">SRV Record Lookup</li>
+          <li class="footer-list-item">TXT Record Lookup</li>
+        </ul>
+
+        <ul class="footer-item mr">
+          <li class="footer-list-item footer-title">ARTICLES & BLOG</li>
+          <li class="footer-list-item">
+            <a href="./articles.html">DNS Articles</a>
+          </li>
+          <li class="footer-list-item">Development Blog</li>
+          <li class="footer-list-item footer-title">DNS SERVERS</li>
+          <li class="footer-list-item">
+            <a href="./global.html">Global Dns Servers</a>
+          </li>
+          <li class="footer-list-item">Australian DNS Servers</li>
+          <li class="footer-list-item">France DNS Servers</li>
+          <li class="footer-list-item">New Zealand DNS Servers</li>
+          <li class="footer-list-item">United Kingdom DNS Servers</li>
+          <li class="footer-list-item">United States DNS Servers</li>
+        </ul>
+
+        <ul class="footer-item mr">
+          <li class="footer-list-item footer-title">Contact</li>
+          <li class="footer-list-item">Email: info@dns.io</li>
+          <li class="footer-list-item">Twitter: @whatsmydns</li>
+          <li class="footer-list-item footer-title">Legal</li>
+          <li class="footer-list-item">Privacy Policy</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- js files -->
+
+    <script src="./main.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
