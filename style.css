@@ -121,18 +121,7 @@ p {
     vertical-align: middle;
 }
 
-.button {
-    display      : inline-block;
-    padding      : 10px;
-    background   : #ccc;
-    cursor       : pointer;
-    border-radius: 5px;
-    border       : 1px solid #ccc;
-}
 
-.button:hover {
-    background: #ddd;
-}
 
 #fileElem {
     display: none;
@@ -593,4 +582,257 @@ h6 {
     .start {
         margin-top: 0;
     }
+}
+
+.bg-gradient {
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+
+    padding-top   : 10rem;
+    padding-bottom: 2rem;
+
+}
+
+.drop-para {
+    color: white;
+}
+
+.button {
+    background-image   : linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+    border-radius      : 10rem;
+    border             : none;
+    text-transform     : uppercase;
+    color              : #fff;
+    cursor             : pointer;
+    /* display         : flex; */
+    align-items        : center;
+    transition         : 0.5s;
+    background-size    : 200% auto;
+    color              : white;
+    box-shadow         : 0 0 10px #eee;
+    margin-top         : 2rem;
+    /* padding-top     : 2rem; */
+}
+
+.button {
+
+    /* padding: 10px; */
+    padding-top   : 10px;
+    padding-bottom: 10px;
+    padding-left  : 12px;
+    padding-right : 12px;
+    cursor        : pointer;
+    display       : inline-block;
+}
+
+
+.button:hover {
+    background-position: right center;
+    color              : #fff;
+    text-decoration    : none;
+}
+
+/* Download */
+
+.download-container {
+    display        : flex;
+    height         : 100vh;
+    width          : 100vw;
+    justify-content: center;
+    align-items    : center;
+
+}
+
+.download-box {
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+
+    display                : flex;
+    padding-top            : 3rem;
+    padding-bottom         : 3rem;
+    padding-left           : 3rem;
+    padding-right          : 3rem;
+    /* justify-content     : center;
+    align-items            : center; */
+    border-top-left-radius : 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.file-name-container {
+    display    : flex;
+    align-items: center;
+}
+
+.file-icon {
+    width : 30px;
+    height: 30px;
+}
+
+.file-name {
+    font-size: 3rem;
+    color    : white;
+}
+
+.file-infos {
+    display: flex;
+}
+
+.file-infos img {
+    width : 30px;
+    height: 20px;
+}
+
+.file-infos h3 {
+    font-size: 1.5rem;
+}
+
+
+
+.informations-wrapper {
+    width    : 50%;
+    display  : flex;
+    flex-wrap: wrap;
+}
+
+.informations {
+    margin-top     : 2rem;
+    color          : #fff;
+    /* margin-right: 3rem; */
+
+}
+
+@media only screen and (max-width: 78.15em) {
+    .download-box {
+        width          : 80%;
+        margin         : 0 auto;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+
+    }
+
+    .informations-wrapper {
+        font-size      : 1.5rem;
+        justify-content: center;
+        align-items    : center;
+        margin         : 0 auto;
+    }
+
+    .clipboard {
+        background     : linear-gradient(to right, #7f00ff, #e100ff);
+        position       : relative;
+        padding-bottom : 2rem;
+        /* padding-left: 2rem; */
+        padding-left   : 0 !important;
+        margin-left    : 0;
+        width          : 80%;
+        margin         : 0 auto;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        /* padding-left: -50px !important; */
+    }
+
+    .dropbox {
+        margin-top: 3rem !important;
+    }
+
+    .file-infos h3 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+.file-info-container {
+    /* width: 130px; */
+    width: 120px;
+}
+
+.second-part {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+}
+
+.dropbox {
+    margin-top: 1rem;
+    font-size : 1.5rem;
+    color     : #fff;
+}
+
+.down-button {
+    padding      : 20px;
+    padding-left : 40px;
+    padding-right: 40px;
+}
+
+
+.clipboard {
+    background    : linear-gradient(to right, #7f00ff, #e100ff);
+    position      : relative;
+    padding-bottom: 2rem;
+    padding-left  : 2rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.copy-input {
+    max-width         : 275px;
+    width             : 100%;
+    cursor            : pointer;
+    background-color  : #eaeaeb;
+    border            : none;
+    color             : #6c6c6c;
+    font-size         : 14px;
+    border-radius     : 5px;
+    padding           : 15px 45px 15px 15px;
+    font-family       : 'Montserrat', sans-serif;
+    box-shadow        : 0 1px 15px #b8c6db;
+    -moz-box-shadow   : 0 1px 15px #b8c6db;
+    -webkit-box-shadow: 0 1px 15px #b8c6db;
+}
+
+.copy-input:focus {
+    outline: none;
+}
+
+.copy-btn {
+    width           : 40px;
+    background-color: #eaeaeb;
+    font-size       : 18px;
+    padding         : 6px 9px;
+    border-radius   : 5px;
+    border          : none;
+    color           : #6c6c6c;
+    margin-left     : -50px;
+    transition      : all .4s;
+}
+
+.copy-btn:hover {
+    transform: scale(1.3);
+    color    : gray;
+    cursor   : pointer;
+}
+
+.copy-btn:focus {
+    outline: none;
+}
+
+.dropbox {
+    display    : flex;
+    align-items: center;
+}
+
+.dropbox img {
+    width : 30px;
+    height: 20px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.file-info-container p {
+    font-size: 1.2rem;
 }
