@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>File</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css"
+    />
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
 
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./drop.css" />
   </head>
 
   <body>
@@ -25,26 +34,70 @@
 
       <!-- dropzone -->
       <div class="bg-gradient">
-        <div id="drop-area">
-          <form class="my-form">
-            <p class="drop-para">
-              Upload multiple files with the file dialog or by dragging and
-              dropping images onto the dashed region
-            </p>
+        <main class="col s12">
+          <div class="row">
+            <div class="col s12">
+              <!-- Uploader Dropzone -->
+              <form
+                action="upload.php"
+                id="zdrop"
+                class="fileuploader center-align"
+              >
+                <div id="upload-label" style="width: 200px">
+                  <i class="material-icons">cloud_upload</i>
+                </div>
+                <span class="tittle">Click the Button or Drop Files Here</span>
+              </form>
 
-            <input
-              type="file"
-              id="fileElem"
-              multiple
-              accept="image/*"
-              onChange="handleFiles(this.files)"
-            />
+              <!-- Preview collection of uploaded documents -->
+              <div class="preview-container">
+                <div class="collection card" id="previews">
+                  <div
+                    class="
+                      collection-item
+                      clearhack
+                      valign-wrapper
+                      item-template
+                    "
+                    id="zdrop-template"
+                  >
+                    <div class="left pv zdrop-inf" data-dz-thumbnail>
+                      <div>
+                        <span data-dz-name></span> <span data-dz-size></span>
+                      </div>
 
-            <label class="button" for="fileElem">Select some files</label>
-          </form>
-          <!-- <progress id="progress-bar" max="100" value="0"></progress> -->
-          <div id="gallery"></div>
-        </div>
+                      <div class="progress">
+                        <div
+                          class="determinate"
+                          style="width: 0"
+                          data-dz-uploadprogress
+                        ></div>
+                      </div>
+                      <div class="dz-error-message">
+                        <span data-dz-errormessage></span>
+                      </div>
+                    </div>
+
+                    <div class="secondary-content actions">
+                      <a
+                        href="#!"
+                        data-dz-remove
+                        class="
+                          btn-floating
+                          ph
+                          red
+                          white-text
+                          waves-effect waves-light
+                        "
+                        ><i class="material-icons white-text">clear</i></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
 
       <!-- statistics -->
@@ -328,12 +381,19 @@
 
     <!-- js files -->
 
-    <script src="./main.js"></script>
-
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.js"></script>
+
     <script>
       AOS.init();
     </script>
+
+    <script src="./main.js"></script>
+    <script src="./drop.js"></script>
   </body>
 </html>
