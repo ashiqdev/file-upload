@@ -140,6 +140,7 @@ p {
     padding-right: 3rem;
     background   : linear-gradient(to right, #7f00ff, #e100ff);
     padding-top  : 3rem;
+    margin-top: -290px;
 }
 
 
@@ -588,7 +589,7 @@ h6 {
     background: linear-gradient(to right, #7f00ff, #e100ff);
 
     padding-top   : 10rem;
-    padding-bottom: 2rem;
+    /* padding-bottom: 2rem; */
 
 }
 
