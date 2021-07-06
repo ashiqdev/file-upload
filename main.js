@@ -130,26 +130,26 @@
 // }
 
 // // statistics
-// const first = document.getElementById('number1');
-// const second = document.getElementById('number2');
-// const third = document.getElementById('number3');
+const first = document.getElementById('number1');
+const second = document.getElementById('number2');
+const third = document.getElementById('number3');
 
-// const countDownStarter = () => {
-//   const countingFunc = (element, time) => {
-//     const counter = new countUp.CountUp(element, time);
+const countDownStarter = () => {
+  const countingFunc = (element, time) => {
+    const counter = new countUp.CountUp(element, time);
 
-//     if (!counter.error) {
-//       counter.start();
-//     } else {
-//       console.log(counter.error);
-//     }
-//   };
+    if (!counter.error) {
+      counter.start();
+    } else {
+      console.log(counter.error);
+    }
+  };
 
-//   countingFunc(first, 6583);
-//   countingFunc(second, 69);
-//   countingFunc(third, 420);
-// };
+  countingFunc(first, 6583);
+  countingFunc(second, 69);
+  countingFunc(third, 420);
+};
 
-// ScrollReveal().reveal('.statistics-container', {
-//   beforeReveal: countDownStarter,
-// });
+ScrollReveal().reveal('.statistics-container', {
+  beforeReveal: countDownStarter,
+});

@@ -4,105 +4,112 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Download</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>Form</title>
+    <link rel="stylesheet" href="./edit.css" />
   </head>
   <body>
     <div>
-      <div class="download-container">
-        <div class="firstTwoContainer">
-          <div class="download-box">
-            <div class="first-part">
-              <div class="file-name-container">
-                <img class="file-icon" src="./img/document.svg" alt="" />
-                <h3 class="file-name">DSCN0567.JPG</h3>
-              </div>
+      <header class="top">
+        <a href="./index.html">
+          <div class="top__logo">
+            <!-- logo will be there -->
+            <img src="./img/logo.svg" alt="logo" />
+          </div>
+        </a>
+      </header>
+      <form class="form">
+        <div class="edit-file-name">
+          <div class="edit-file-heading">Edit File Details</div>
+          <img src="./img/document2.svg" class="edit-file-icon" alt="" />
+          <h3 class="edit-file-title">Resume.pdf</h3>
+          <p class="edit-file-time">Uploaded: 1 minute ago</p>
+        </div>
 
-              <div class="informations-wrapper">
-                <div class="informations right-margin">
-                  <div class="file-info-container">
-                    <div class="file-infos">
-                      <img src="./img/database.svg" alt="" />
-                      <h3>File size</h3>
-                    </div>
-                    <p>2.24MB</p>
-                  </div>
-                </div>
+        <div class="input-box-container">
+          <span class="edit-title">Your File Url</span>
+          <input
+            class="form_input"
+            type="text"
+            placeholder="Your File Url"
+            value="https://nofile.io/resume.pdf"
+          />
+        </div>
 
-                <div class="informations upper-space">
-                  <div class="file-info-container">
-                    <div class="file-infos">
-                      <img src="./img/calendar.svg" alt="" />
-                      <h3>Uploaded</h3>
-                    </div>
-                    <p>2 Minutes Ago</p>
-                  </div>
-                </div>
+        <div class="input-box-container">
+          <span class="edit-title">HTML URL</span>
+          <input
+            class="form_input"
+            type="text"
+            placeholder="HTML URL"
+            value="<a href='https://nofile.io/resume.pdf'>Resume.pdf</a>"
+          />
+        </div>
 
-                <div class="informations upper-space right-margin">
-                  <div class="file-info-container">
-                    <div class="file-infos">
-                      <img src="./img/share.svg" alt="" />
-                      <h3>Share</h3>
-                    </div>
+        <div class="input-box-container">
+          <span class="edit-title">FORUM URL</span>
+          <input
+            class="form_input"
+            type="text"
+            placeholder="FORUM URL"
+            value="[url='https://nofile.io/resume.pdf']"
+          />
+        </div>
 
-                    <p>2 Minutes Ago</p>
-                  </div>
-                </div>
+        <button class="form_submit" type="button">Submit</button>
 
-                <div class="informations upper-space">
-                  <div class="file-info-container">
-                    <div class="file-infos">
-                      <img src="./img/document.svg" alt="" />
-                      <h3>File Type</h3>
-                    </div>
-                    <p>Other</p>
-                  </div>
-                </div>
-
-                <div class="informations upper-space">
-                  <div class="file-info-container">
-                    <div class="file-infos">
-                      <img src="./img/monitor.svg" alt="" />
-                      <h3>Resolutions</h3>
-                    </div>
-                    <p>3648 X 2736(2736p)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="second-part">
-              <button class="button down-button">
-                <p>Download(2.24MB)</p>
-              </button>
-              <div class="dropbox">
-                <img src="./img/dropbox.svg" alt="" />
-                <a>Save to Dropbox</a>
-              </div>
-            </div>
+        <div class="file-settings-container">
+          <div class="file-settings-wrapper">
+            <img src="./img/setting.svg" alt="" />
+            <h3 class="file-settings-title">File settings</h3>
           </div>
 
-          <div class="clipboard">
+          <div class="input-box-container">
+            <!-- <span class="edit-title">Set a Password For This File</span> -->
             <input
-              class="copy-input"
-              value="https://www.test.com"
-              id="copyClipboard"
-              readonly
+              class="form_input"
+              type="text"
+              placeholder="Set a password For This File"
             />
-            <button class="copy-btn" id="copyButton" onclick="copy()">
-              <i class="far fa-copy"></i>
+
+            <div class="user-interaction-container">
+              <div class="checkbox">
+                <input type="checkbox" />
+                <span class="checkbox-text"
+                  >Disable previews for this file</span
+                >
+              </div>
+
+              <div class="input-select">
+                <span>Keep this file for:</span>
+                <select name="" id="">
+                  <option value="">As Long as Possible</option>
+                  <option value="">B</option>
+                  <option value="">C</option>
+                </select>
+              </div>
+            </div>
+
+            <button class="form_submit" type="button">Save Settings</button>
+          </div>
+        </div>
+
+        <div class="file-delete-container">
+          <div class="file-settings-wrapper">
+            <img src="./img/setting.svg" alt="" />
+            <h3 class="file-settings-title">Delete File</h3>
+          </div>
+
+          <p class="file-delete-para">
+            Press The button below if you wisth to delete this file
+          </p>
+
+          <div class="input-box-container">
+            <button class="form_submit danger" type="button">
+              Delete This File
             </button>
           </div>
         </div>
-      </div>
+      </form>
 
       <!-- footer -->
       <div class="footer-container">
