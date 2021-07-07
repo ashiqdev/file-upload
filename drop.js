@@ -7,7 +7,7 @@ $(document).ready(function () {
     previewNode.parentNode.removeChild(previewNode);
 
     var zdrop = new Dropzone(target, {
-      url: 'abcd.js',
+      url: 'http:localost:3000/api',
       maxFiles: 10,
       maxFilesize: 30,
       previewTemplate: previewTemplate,
