@@ -140,7 +140,8 @@ p {
     padding-right: 3rem;
     background   : linear-gradient(to right, #7f00ff, #e100ff);
     padding-top  : 3rem;
-    margin-top: -290px;
+    /* margin-top: -290px; */
+    margin-top: -20px;
 }
 
 
@@ -891,7 +892,7 @@ a {
     margin-bottom        : 3rem;
 }
 
-.card {
+.card-mia {
     font-family        : 'Heebo';
     --bg-filter-opacity: 0.5;
     background-image   : linear-gradient(rgba(0, 0, 0, var(--bg-filter-opacity)), rgba(0, 0, 0, var(--bg-filter-opacity))), var(--bg-img);
@@ -914,17 +915,17 @@ a {
     text-decoration    : none;
 }
 
-.card:hover {
+.card-mia:hover {
     transform: rotate(0);
 }
 
-.card h1 {
+.card-mia h1 {
     margin     : 0;
     font-size  : 1.5em;
     line-height: 1.2em;
 }
 
-.card p {
+.card-mia p {
     font-size  : 0.75em;
     font-family: 'Open Sans';
     margin-top : 0.5em;
@@ -932,13 +933,13 @@ a {
 }
 
 
-.card .tags {
+.card-mia .tags {
     display    : flex;
     padding-top: 1rem;
 }
 
 
-.card .tags .tag {
+.card-mia .tags .tag {
     font-size    : 0.75em;
     /* background: rgba(255,255,255,0.5); */
     background   : #7f00ff;
@@ -951,12 +952,12 @@ a {
     border-radius: 10px;
 }
 
-.card:hover .tags .tag {
+.card-mia:hover .tags .tag {
 
     color: white;
 }
 
-.card .date {
+.card-img-container .date {
     position   : absolute;
     top        : 0;
     right      : 0;
@@ -966,8 +967,8 @@ a {
     opacity    : .8;
 }
 
-.card:before,
-.card:after {
+.card-mia:before,
+.card-mia:after {
     content                   : '';
     transform                 : scale(0);
     transform-origin          : top left;
@@ -980,25 +981,25 @@ a {
     transition-timing-function: ease-in-out;
 }
 
-.card:before {
+.card-mia:before {
     background: #ddd;
     width     : 250%;
     height    : 250%;
 }
 
-.card:after {
+.card-mia:after {
     background: white;
     width     : 200%;
     height    : 200%;
 }
 
-.card:hover {
+.card-mia:hover {
     color: var(--color);
 }
 
 
-.card:hover:before,
-.card:hover:after {
+.card-mia:hover:before,
+.card-mia:hover:after {
     transform: scale(1);
 }
 
@@ -1053,7 +1054,7 @@ a {
         padding: 4rem 2rem;
     }
 
-    .card {
+    .card-mia {
         max-width: calc(100vw - 4rem);
     }
 }

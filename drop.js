@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     var zdrop = new Dropzone(target, {
       url: 'upload.php',
-      maxFiles: 1,
+      maxFiles: 10,
       maxFilesize: 30,
       previewTemplate: previewTemplate,
       previewsContainer: '#previews',
@@ -17,6 +17,9 @@ $(document).ready(function () {
 
     zdrop.on('addedfile', function (file) {
       $('.preview-container').css('visibility', 'visible');
+      const test = document.querySelector('.fileuploader');
+      console.log({ test });
+      test.style.marginTop = '-30px';
     });
 
     zdrop.on('totaluploadprogress', function (progress) {

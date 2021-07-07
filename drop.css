@@ -1,10 +1,10 @@
 .fileuploader {
-    position  : relative;
-    width     : 60%;
-    margin    : auto;
-    height    : 400px;
-    border    : 3px dashed #777;
-    border    : 3px dashed #777;
+    position: relative;
+    width   : 60%;
+    margin  : auto;
+    height  : 400px;
+    border  : 3px dashed #777;
+    border  : 3px dashed #777;
 
     /* background: #E5E7EB; */
     background: #fff;
@@ -50,9 +50,9 @@
 
 span.tittle {
     font-size: 1.8rem;
-    position: relative;
-    top     : 222px;
-    color   : #bdbdbd;
+    position : relative;
+    top      : 222px;
+    color    : #bdbdbd;
 }
 
 .fileuploader #upload-label i {
@@ -73,7 +73,7 @@ span.tittle {
 .preview-container {
     position  : relative;
     bottom    : 0px;
-    width     : 35%;
+    width     : 30%;
     margin    : auto;
     top       : 25px;
     visibility: hidden;
@@ -95,7 +95,8 @@ span.tittle {
 }
 
 .preview-container #previews.collection .collection-item {
-    background-color: #e0e0e0;
+    background-color: #F3F4F6;
+    padding         : 22px 20px;
 }
 
 .preview-container #previews.collection .actions a {
@@ -111,7 +112,7 @@ span.tittle {
 
 .preview-container #previews.collection .dz-error-message {
     font-size : 0.8em;
-    margin-top: -12px;
+    margin-top: -1px;
     color     : #F44336;
 }
 
@@ -127,4 +128,38 @@ span.tittle {
     .preview-container {
         width: 100%;
     }
+}
+
+
+
+
+.file-items {
+    display    : flex;
+    align-items: center;
+}
+
+.file-drop-name {
+    margin-right: 1rem;
+    margin-left : 1rem;
+    /* font-size   : 1.8rem; */
+}
+
+.file-drop-size {
+    margin-top: 0.5rem;
+}
+
+.collection {
+    font-size    : 1.6rem;
+    border-radius: 1rem;
+    position     : relative;
+    z-index      : 4000;
+    margin-bottom: 10rem !important;
+}
+
+.collection .collection-item:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.progress {
+    /* width: 550px; */
 }

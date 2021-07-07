@@ -16,8 +16,8 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
 
-    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./drop.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
@@ -28,7 +28,6 @@
             <!-- logo will be there -->
             <img src="./img/logo.svg" alt="logo" />
           </div>
-          P
         </a>
       </header>
 
@@ -62,8 +61,12 @@
                     id="zdrop-template"
                   >
                     <div class="left pv zdrop-inf" data-dz-thumbnail>
-                      <div>
-                        <span data-dz-name></span> <span data-dz-size></span>
+                      <div class="file-items">
+                        <span class="file-drop-icon">
+                          <img src="./img/document2.svg" alt="" />
+                        </span>
+                        <span class="file-drop-name" data-dz-name></span>
+                        <span class="file-drop-size" data-dz-size></span>
                       </div>
 
                       <div class="progress">
@@ -76,21 +79,6 @@
                       <div class="dz-error-message">
                         <span data-dz-errormessage></span>
                       </div>
-                    </div>
-
-                    <div class="secondary-content actions">
-                      <a
-                        href="#!"
-                        data-dz-remove
-                        class="
-                          btn-floating
-                          ph
-                          red
-                          white-text
-                          waves-effect waves-light
-                        "
-                        ><i class="material-icons white-text">clear</i></a
-                      >
                     </div>
                   </div>
                 </div>
