@@ -373,12 +373,12 @@ h6 {
     transition   : all 0.2s;
 }
 
-.info-card:hover {
+/* .info-card:hover {
     box-shadow: 0 18px 10px rgba(0, 0, 0, 0.2);
     cursor    : pointer;
     transform : translateY(4px);
 
-}
+} */
 
 
 @media only screen and (max-width: 78.15em) {
@@ -641,13 +641,14 @@ h6 {
 
 .download-container {
     display         : flex;
-    height          : 80vh;
+    /* height          : 80vh; */
     width           : 100vw;
     justify-content : center;
-    align-items     : center;
+    /* align-items     : center; */
     /* background   : linear-gradient(to right, #1e3c72, #2a5298); */
     background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-
+    padding-bottom: 18rem;
+    padding-top: 10rem;
 }
 
 .firstTwoContainer {

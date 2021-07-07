@@ -104,6 +104,105 @@
         </div>
       </div>
 
+      <!-- info section -->
+      <div class="app-info-container">
+        <div class="info-card">
+          <div class="card-img-container">
+            <div data-aos="fade-right" class="anim">
+              <lottie-player
+                src="./drag.json"
+                background="transparent"
+                speed="1"
+                style="width: 100%; height: 100%"
+                autoplay
+                loop
+              ></lottie-player>
+            </div>
+          </div>
+
+          <div class="card-details">
+            <span class="card_name">Drag and Drop Friendly</span>
+            <p class="card_name-para">
+              The online sharing of files should be easy, so all you have to do
+              is drag and drop your files into our file uploader and we’ll
+              create a shareable URL in an instant.
+            </p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="card-img-container">
+            <div data-aos="fade-right" class="anim">
+              <lottie-player
+                src="./lottieUpload.json"
+                background="transparent"
+                speed="1"
+                style="width: 100%; height: 100%"
+                autoplay
+                loop
+              ></lottie-player>
+            </div>
+          </div>
+
+          <div class="card-details">
+            <span class="card_name">Multiple Uploads</span>
+            <p class="card_name-para">
+              Do you require more than one file upload at a time? No problem, by
+              creating a free account you can upload as many as 30 files at the
+              same time, without delay
+            </p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="card-img-container">
+            <div data-aos="fade-right" class="anim">
+              <lottie-player
+                src="./password.json"
+                background="transparent"
+                speed="1"
+                style="width: 100%; height: 100%"
+                autoplay
+                loop
+              ></lottie-player>
+            </div>
+          </div>
+
+          <div class="card-details">
+            <span class="card_name">No Registration Required</span>
+            <p class="card_name-para">
+              You always have the option to sign up for free to enjoy our full
+              file sharing features, but you can also simply upload and share
+              without registration, anonymously
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- svg wave before footer -->
+      <div class="wave">
+        <svg
+          id="svg"
+          viewBox="0 0 1440 400"
+          xmlns="http://www.w3.org/2000/svg"
+          class="transition duration-300 ease-in-out delay-150"
+        >
+          <defs>
+            <linearGradient id="gradient">
+              <stop offset="5%" stop-color="#7f00ffff"></stop>
+              <stop offset="95%" stop-color="#e100ffff"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            d="M 0,400 C 0,400 0,200 0,200 C 199.86666666666667,226.8 399.73333333333335,253.6 559,240 C 718.2666666666667,226.4 836.9333333333334,172.4 977,159 C 1117.0666666666666,145.6 1278.5333333333333,172.8 1440,200 C 1440,200 1440,400 1440,400 Z"
+            stroke="none"
+            stroke-width="0"
+            fill="url(#gradient)"
+            class="transition-all duration-300 ease-in-out delay-150"
+            transform="rotate(-180 720 200)"
+          ></path>
+        </svg>
+      </div>
+
       <!-- footer -->
       <div class="footer-container">
         <div class="footer-item">
@@ -169,5 +268,7 @@
         </ul>
       </div>
     </div>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
 </html>
