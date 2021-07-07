@@ -7,7 +7,7 @@
     border  : 3px dashed #777;
 
     /* background: #E5E7EB; */
-    background: #fff;
+    background      : #fff;
     background-color: rgba(0, 0, 0, 0.6);
 
     margin-top: 85px;
@@ -141,8 +141,8 @@ span.tittle {
 }
 
 .file-drop-name {
-    margin-right: 1rem;
-    margin-left : 1rem;
+    margin-right   : 1rem;
+    margin-left    : 1rem;
     /* font-size   : 1.8rem; */
 }
 
@@ -164,4 +164,8 @@ span.tittle {
 
 .progress {
     /* width: 550px; */
+}
+
+.left.pv.zdrop-inf {
+    width: 100% !important;
 }
