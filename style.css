@@ -140,9 +140,9 @@ p {
     padding-left : 3rem;
     padding-right: 3rem;
     background   : linear-gradient(to right, #7f00ff, #e100ff);
-    padding-top  : 3rem;
+    /* padding-top  : 3rem; */
     /* margin-top: -290px; */
-    margin-top   : -20px;
+    margin-top   : -150px;
 }
 
 
