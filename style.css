@@ -45,20 +45,17 @@ a {
     display         : flex;
     align-items     : center;
     justify-content : space-between;
-    padding         : 10px;
+    font-size: 15px;
+    padding         : 7px;
 }
 
 .dow {
     padding: 0.7rem !important;
 }
  
-nav {
-    background-color: hsl(20, 33%, 96%);
-    /* color        : #777 !important; */
-}
 
 .nav-item a:hover {
-    background-color: hsl(20, 33%, 96%);
+    background-color: #f9f5f3;
 
     opacity: 0.75;
 }
@@ -619,7 +616,7 @@ h6 {
 
     /* padding-top      : 10rem; */
     /* padding-bottom: 2rem; */
-    margin-top: -1rem;
+    /* margin-top: -1rem; */
 
 }
 
