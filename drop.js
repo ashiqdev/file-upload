@@ -18,6 +18,16 @@ $(document).ready(function () {
     zdrop.on('addedfile', function (file) {
       $('.preview-container').css('visibility', 'visible');
       // $('.filuploader-container').css('height', '30vh');
+
+      var windowSize = $(window).width();
+      console.log({ windowSize });
+
+      if (windowSize <= 414) {
+        $('.filuploader-container').css('marginTop', '-140px');
+      } else {
+        $('.filuploader-container').css('marginTop', '-190px');
+      }
+
       $('.filuploader-container').animate({ height: '300px' }, 1000);
       $('.fileuploader').css('marginTop', '22rem');
       $('.statistics-wrapper').css('paddingTop', '100px');
