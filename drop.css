@@ -1,17 +1,23 @@
 .filuploader-container {
     display: flex;
     width: 100vw !important;
-    height: 98vh !important;
+    height: 85vh;
     flex-direction: column;
-    /* height: 100vh !important; */
     justify-content: center !important;
     align-items: center !important;
 
 }
 
+@media only screen and (max-width: 78.15em) {
+    .fileuploader {
+        width: 40%;
+    }
+}
+
 
 .fileuploader {
     position  : relative;
+    /* margin-top: 22rem; */
     width     : 60%;
     /* margin    : auto;
     margin-top: auto; */
@@ -147,7 +153,8 @@ span.tittle {
 
 @media only screen and (max-width: 601px) {
     .fileuploader {
-        width: 100%;
+        /* width: 100%; */
+        width: 80%;
     }
 
     .preview-container {
