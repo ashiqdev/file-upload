@@ -103,8 +103,9 @@ span.tittle {
 .preview-container {
     position  : relative;
     bottom    : 0px;
-    width     : 30%;
-    margin    : auto;
+    width     : 61%;
+    margin    : 0 auto;
+    left: 5px;
     top       : 25px;
     visibility: hidden;
 }
@@ -159,6 +160,7 @@ span.tittle {
 
     .preview-container {
         width: 80%;
+        left: 0;
     }
 }
 
