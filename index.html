@@ -17,6 +17,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
 
+    <link rel="stylesheet" href="./animtation/css/easy-reveal.min.css" />
     <link rel="stylesheet" href="./drop.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
@@ -34,7 +35,7 @@
           <li class="menu-item"><a href="">Menu1</a></li>
           <li class="menu-item"><a href="">Menu2</a></li>
           <li class="menu-item"><a href="">Menu3</a></li>
-        <li class="menu-item last"><a href="">Menu4</a></li>
+          <li class="menu-item last"><a href="">Menu4</a></li>
         </ul>
       </header>
 
@@ -206,7 +207,7 @@
           </p>
         </div>
 
-        <div class="wrap-lookup">
+        <div data-easy-reveal="fade-in-down" class="wrap-lookup">
           <div class="container">
             <div class="flex-wrapper">
               <div class="lookup-card">
@@ -436,7 +437,7 @@
       </div>
 
       <!-- info section -->
-      <div class="app-info-container">
+      <div data-easy-reveal="fade-in-down"  class="app-info-container">
         <div class="info-card">
           <div class="card-img-container">
             <div data-aos="fade-right" class="anim">
@@ -620,10 +621,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.js"></script>
-
     <script>
       AOS.init();
     </script>
+
+    <script src="./animtation/js/jquery.easy-reveal.min.js"></script>
 
     <script src="./main.js"></script>
     <script src="./drop.js"></script>
