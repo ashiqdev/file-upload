@@ -709,8 +709,11 @@ h6 {
     box-shadow: 0 10px 20px 6px rgba(0, 0, 0, .2);
 
     border-radius: 10px;
+}
 
-
+.file-img {
+    border-radius: 1rem;
+    height: 150px;
 }
 
 @media only screen and (max-width: 78.15em) {
