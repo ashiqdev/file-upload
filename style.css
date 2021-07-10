@@ -719,6 +719,17 @@ h6 {
     width              : 100vw;
     justify-content    : center;
     padding-bottom     : 18rem;
+   
+    padding-top        : 10rem;
+}
+
+.download-video-container {
+    display            : flex;
+    /* height          : 80vh; */
+    width              : 100vw;
+    justify-content    : center;
+    padding-bottom     : 18rem;
+   
     padding-top        : 10rem;
 }
 
@@ -734,11 +745,21 @@ h6 {
     .download-container {
         padding-top: 1rem;
     }
+
+    .download-video-container {
+        padding-top: 1rem;
+
+    }
 }
 
 @media only screen and (max-width: 659px) {
     .download-container {
         padding-top: 32rem;
+    }
+
+    .download-video-container {
+        padding-top: 2rem;
+
     }
 
     .footer-container {
@@ -752,6 +773,11 @@ h6 {
         padding-top: 22rem;
     }
 
+    .download-video-container {
+        padding-top: 22rem;
+
+    }
+
     .footer-container {
         margin-top: 0 !important;
     }
@@ -760,6 +786,11 @@ h6 {
 @media only screen and (max-width: 375px) {
     .download-container {
         padding-top: 28rem;
+    }
+
+    .download-video-container {
+        padding-top: 28rem;
+
     }
 
     .footer-container {
@@ -775,6 +806,11 @@ h6 {
         margin-bottom: 3rem;
     }
 
+    .download-video-container {
+        padding-top  : 28rem;
+        margin-bottom: 3rem;
+    }
+
 }
 
 @media only screen and (max-width: 320px) {
@@ -782,6 +818,12 @@ h6 {
         padding-top: 48rem;
     }
 
+    .download-video-container {
+        padding-top: 48rem;
+
+    }
+    
+    
     .app-info-container {
         margin-top: 25rem !important;
     }
