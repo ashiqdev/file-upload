@@ -42,6 +42,11 @@ $(document).ready(function () {
     $(window).on('resize', function () {
       var windowSize = $(window).width();
 
+      const isCardAvaile = $('.preview-container').is(':visible');
+
+
+      console.log({ isCardAvaile });
+
       if (windowSize <= 414) {
         $('.filuploader-container').css('marginTop', '-140px');
       } else if (windowSize <= 1250) {

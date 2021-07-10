@@ -414,16 +414,16 @@ h6 {
         flex-direction : column;
         justify-content: center;
         margin-top     : 5rem !important;
-        align-items: center;
+        align-items    : center;
     }
 }
 
 @media only screen and (max-width: 900px) {
     .app-info-container {
-        display: block;
+        display        : block;
         flex-direction : column;
         justify-content: center;
-        /* align-items: center; */
+        /* align-items : center; */
     }
 }
 
@@ -762,7 +762,7 @@ h6 {
 
 @media only screen and (max-width: 360px) {
     .download-container {
-        padding-top: 28rem;
+        padding-top  : 28rem;
         margin-bottom: 3rem;
     }
 
@@ -880,19 +880,23 @@ h6 {
 
     .clipboard {
 
-        background     : linear-gradient(to right, #7f00ff, #e100ff);
-        position       : relative;
-        padding-bottom : 2rem;
-        /* padding-left: 2rem; */
-        padding-left   : 0 !important;
-        margin-left    : 0;
+        background        : linear-gradient(to right, #7f00ff, #e100ff);
+        position          : relative;
+        padding-bottom    : 2rem;
+        /* padding-left   : 2rem; */
+        padding-left      : 0 !important;
+        margin-left       : 0;
         /* margin         : 0 auto; */
-        padding-right: 1.2rem;
-        display        : flex;
-        justify-content: center;
-        align-items    : center;
+        padding-right     : 1.2rem;
+        display           : flex;
+        justify-content   : center;
+        align-items       : center;
 
     }
+
+
+
+
 
     .dropbox {
         margin-top: 3rem !important;
@@ -950,10 +954,21 @@ h6 {
     position                  : relative;
     padding-bottom            : 2rem;
     padding-left              : 2rem;
-    border-bottom-left-radius : 10px;
-    border-bottom-right-radius: 10px;
+   
 
 }
+
+.video-container {
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+    border-bottom-left-radius : 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
 
 .copy-input {
     max-width         : 275px;
