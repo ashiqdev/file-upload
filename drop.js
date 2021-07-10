@@ -24,19 +24,33 @@ $(document).ready(function () {
 
       if (windowSize <= 414) {
         $('.filuploader-container').css('marginTop', '-140px');
-      } else if(windowSize <=1250) {
+      } else if (windowSize <= 1250) {
         $('.filuploader-container').css('marginTop', '-140px');
-
       } else {
         $('.filuploader-container').css('marginTop', '-190px');
       }
 
-      $('.filuploader-container').animate({ height: '300px' }, 1000);
+      $('.filuploader-container').animate({ height: '300px' }, 500);
       $('.fileuploader').css('marginTop', '22rem');
       $('.statistics-wrapper').css('paddingTop', '100px');
       $('.upload-icon').css('height', '50px');
       $('.tittle').hide();
       $('.upload-icon').css('top', '5%');
+    });
+
+    // window resize
+    $(window).on('resize', function () {
+      var windowSize = $(window).width();
+
+      if (windowSize <= 414) {
+        $('.filuploader-container').css('marginTop', '-140px');
+      } else if (windowSize <= 1250) {
+        console.log('ki');
+        $('.filuploader-container').css('marginTop', '-140px');
+      } else {
+        console.log('boro boro');
+        $('.filuploader-container').css('marginTop', '-190px');
+      }
     });
 
     zdrop.on('totaluploadprogress', function (progress) {
