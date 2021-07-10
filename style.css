@@ -406,11 +406,24 @@ h6 {
 }
 
 
+
+
+
 @media only screen and (max-width: 78.15em) {
     .app-info-container {
         flex-direction : column;
         justify-content: center;
         margin-top     : 5rem !important;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .app-info-container {
+        display: block;
+        flex-direction : column;
+        justify-content: center;
+        /* align-items: center; */
     }
 }
 
@@ -701,15 +714,7 @@ h6 {
 }
 
 
-@media only screen and (max-width: 659px) {
-    .download-container {
-        padding-top: 32rem;
-    }
 
-    .footer-container {
-        margin-top: 0 !important;
-    }
-}
 
 
 @media only screen and (max-width: 78.15em) {
@@ -719,6 +724,16 @@ h6 {
 
     .download-container {
         padding-top: 1rem;
+    }
+}
+
+@media only screen and (max-width: 659px) {
+    .download-container {
+        padding-top: 32rem;
+    }
+
+    .footer-container {
+        margin-top: 0 !important;
     }
 }
 
