@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Preview</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css"
+  />
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./drop.css">
 </head>
 <body>
@@ -14,13 +19,13 @@
             class="collection-item clearhack valign-wrapper item-template"
             id="zdrop-template"
           >
-            <div class="left pv zdrop-inf" data-dz-thumbnail>
+            <div class=" left pv zdrop-inf" data-dz-thumbnail>
               <div class="file-items">
                 <span class="file-drop-icon">
                   <img src="./img/document2.svg" alt="" />
                 </span>
-                <span class="file-drop-name" data-dz-name></span>
-                <span class="file-drop-size" data-dz-size></span>
+                <span class="file-drop-name" data-dz-name>lopremipsum.pdf</span>
+                <span class="file-drop-size" data-dz-size>3.4Mb</span>
               </div>
     
               <div class="progress">
@@ -31,11 +36,13 @@
                 ></div>
               </div>
               <div class="dz-error-message">
-                <span data-dz-errormessage></span>
+                <span data-dz-errormessage>Server responded with 405 code</span>
               </div>
             </div>
           </div>
         </div>
+
+        
       </div>
 </body>
 </html>

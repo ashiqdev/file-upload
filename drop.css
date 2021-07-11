@@ -1,10 +1,10 @@
 .filuploader-container {
-    display: flex;
-    width: 100vw !important;
-    height: 85vh;
-    flex-direction: column;
+    display        : flex;
+    width          : 100vw !important;
+    height         : 85vh;
+    flex-direction : column;
     justify-content: center !important;
-    align-items: center !important;
+    align-items    : center !important;
 
 }
 
@@ -12,24 +12,40 @@
     .fileuploader {
         width: 40%;
     }
+
+    .preview-container {
+        width: 80% !important;
+        /* font-size: 2rem !important; */
+    }
+
+    .preview-container #previews.collection .dz-error-message {
+        font-size : 1.4rem !important;
+    }
 }
 
 
 .fileuploader {
-    position  : relative;
+    position     : relative;
     /* margin-top: 22rem; */
-    width     : 60%;
+    width        : 60%;
     /* margin    : auto;
-    margin-top: auto; */
-    height    : 400px;
-    border    : 3px dashed #777;
-    border    : 3px dashed #fff;
+    margin-top   : auto; */
+    height       : 400px;
+    border       : 3px dashed #777;
+    border       : 3px dashed #fff;
 
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color   : rgba(0, 0, 0, 0.4);
     /* margin-top      : 85px; */
 
     /* border-radius   : 60px; */
 }
+
+.progress, .determinate {
+    width: 100% !important;
+    color: #059669;
+    background: #6B7280;
+}
+
 
 .fileuploader #upload-label {
     background  : rgba(231, 97, 92, 0);
@@ -101,18 +117,17 @@ span.tittle {
 
 /** Preview of collections of uploaded documents **/
 .preview-container {
-    position  : relative;
-    bottom    : 0px;
-    width     : 61%;
-    margin    : 0 auto;
-    left: 5px;
-    top       : 25px;
-    visibility: visible;
+    position     : relative;
+    bottom       : 0px;
+    width        : 35%;
+    margin       : auto;
+    top          : 25px;
+    /* visibility: hidden; */
 }
 
 .preview-container #previews {
-    max-height: 400px;
-    overflow  : auto;
+    max-height : 400px;
+    /* overflow: auto;  */
 }
 
 .preview-container #previews .zdrop-info {
@@ -126,8 +141,17 @@ span.tittle {
 }
 
 .preview-container #previews.collection .collection-item {
-    background-color: #F3F4F6;
-    padding         : 22px 20px;
+    background-color: #e0e0e0;
+}
+
+.file-items {
+    display    : flex;
+    align-items: center;
+    font-size  : 1.5rem;
+}
+
+.file-drop-name {
+    margin-right: 1rem;
 }
 
 .preview-container #previews.collection .actions a {
@@ -143,9 +167,8 @@ span.tittle {
 
 .preview-container #previews.collection .dz-error-message {
     font-size : 0.8em;
-    margin-top: -1px;
+    margin-top: -12px;
     color     : #F44336;
-
 }
 
 
@@ -154,47 +177,28 @@ span.tittle {
 
 @media only screen and (max-width: 601px) {
     .fileuploader {
-        /* width: 100%; */
         width: 80%;
     }
 
     .preview-container {
-        width: 80%;
-        left: 0;
+        width: 100%;
     }
 }
 
-
-
-
-.file-items {
-    display    : flex;
-    align-items: center;
+.preview-container #previews.collection .dz-error-message {
+    font-size : 1rem;
+    margin-top: -1px;
+    color     : #F44336;
 }
 
-.file-drop-name {
-    margin-right   : 1rem;
-    margin-left    : 1rem;
-    /* font-size   : 1.8rem; */
-}
-
-.file-drop-size {
-    margin-top: 0.5rem;
-}
-
-.collection {
-    font-size    : 1.6rem;
-    border-radius: 1rem;
-    position     : relative;
-    z-index      : 4000;
-    margin-bottom: 10rem !important;
-}
-
-.collection .collection-item:not(:last-child) {
-    margin-bottom: 2rem;
-}
-
-
-.left.pv.zdrop-inf {
+.zdrop-template {
     width: 100% !important;
+}
+
+.zdrop-inf {
+    width: 100% !important;
+}
+
+.mtt {
+    margin-top: 3rem;
 }

@@ -366,6 +366,7 @@ h6 {
 
 
 
+
 @media only screen and (min-width: 1000px) {
 
     .wave {
@@ -392,6 +393,60 @@ h6 {
         margin-top: -120px !important;
     }
 }
+
+@media only screen and (max-width: 450px) {
+
+    .wave-main {
+        /* margin-top: -40.9px !important; */
+        /* display: none; */
+        margin-top: 5px;
+    }
+
+    .more-content-section__container {
+        padding-top: 39rem !important;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    .wave-main {
+        /* margin-top: -40.9px !important; */
+        /* display: none; */
+        margin-top: 35px;
+    }
+
+    .more-content-section__container {
+        padding-top: 39rem !important;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+
+    .wave-main {
+        /* margin-top: -40.9px !important; */
+        /* display: none; */
+        margin-top: 28px;
+    }
+
+    .more-content-section__container {
+        padding-top: 39rem !important;
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+
+    .wave-main {
+        /* margin-top: -40.9px !important; */
+        /* display: none; */
+        margin-top: 20px;
+    }
+
+    .more-content-section__container {
+        padding-top: 39rem !important;
+    }
+}
+
 
 
 /* info container */
