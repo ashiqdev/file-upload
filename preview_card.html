@@ -46,11 +46,6 @@
               <div class="dz-error-message">
                 <span data-dz-errormessage>Server responded with 405 code</span>
               </div>
-
-              <div class="speed-container">
-                <img src="./img/upspeed.svg" class="speed-icon" alt="" />
-                <p>500 kbp/s</p>
-              </div>
             </div>
           </div>
         </div>
@@ -75,6 +70,7 @@
 
             <!-- download and copy icon -->
             <div class="clipboard-url">
+              <label class="label" for="copyClipboard">Download Link</label>
               <input
                 class="copy-input-url"
                 value="https://www.test.com"
@@ -84,25 +80,21 @@
               <button class="copy-btn" id="copyButton" onclick="copy()">
                 <i class="far fa-copy"></i>
               </button>
-
-              <button class="copy-btn2" id="copyButton" onclick="copy()">
-                <i class="fas fa-share-square"></i>
-              </button>
             </div>
 
             <!-- edit-icon -->
             <div class="clipboard-url">
-                <input
-                  class="copy-input-url"
-                  value="https://www.test.com"
-                  id="copyClipboard"
-                  readonly
-                />
-                <button class="copy-btn" id="copyButton" onclick="copy()">
-                  <i class="far fa-edit"></i>
-                </button>
-
-              </div>
+              <label class="label" for="edit">Edit File Link</label>
+              <input
+                class="copy-input-url"
+                value="https://www.test.com"
+                id="edit"
+                readonly
+              />
+              <button class="copy-btn" id="copyButton" onclick="copy()">
+                <i class="far fa-edit"></i>
+              </button>
+            </div>
 
             <div class="bottom-part">
               <div class="dz-success-message">
