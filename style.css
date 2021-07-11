@@ -809,7 +809,7 @@ h6 {
 
 @media only screen and (max-width: 659px) {
     .download-container {
-        padding-top: 32rem;
+        padding-top: 10rem;
     }
 
     .download-video-container {
@@ -825,7 +825,7 @@ h6 {
 
 @media only screen and (max-width: 411px) {
     .download-container {
-        padding-top: 22rem;
+        padding-top: 1rem;
     }
 
     .download-video-container {
