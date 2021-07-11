@@ -1,3 +1,7 @@
+
+
+
+
 .filuploader-container {
     display        : flex;
     width          : 100vw !important;
@@ -20,6 +24,45 @@
 
     .preview-container #previews.collection .dz-error-message {
         font-size : 1.4rem !important;
+    }
+
+    .preview-container #previews.collection .dz-success-message {
+        font-size: 1.4rem !important;
+    }
+
+
+    input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+        max-width         : 275px !important;
+        width             : 100%;
+        cursor            : pointer;
+        background-color  : #eaeaeb;
+        border            : none;
+        color             : #6c6c6c;
+        font-size         : 14px;
+        border-radius     : 5px !important;
+        padding           : 12px 0px 8px 15px !important;
+        font-family       : 'Montserrat', sans-serif;
+        box-shadow        : 0 1px 15px #b8c6db;
+        -moz-box-shadow   : 0 1px 15px #b8c6db;
+        -webkit-box-shadow: 0 1px 15px #b8c6db;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+        max-width         : 220px !important;
+        width             : 100%;
+        cursor            : pointer;
+        background-color  : #eaeaeb;
+        border            : none;
+        color             : #6c6c6c;
+        font-size         : 14px;
+        border-radius     : 5px !important;
+        padding           : 12px 0px 8px 15px !important;
+        font-family       : 'Montserrat', sans-serif;
+        box-shadow        : 0 1px 15px #b8c6db;
+        -moz-box-shadow   : 0 1px 15px #b8c6db;
+        -webkit-box-shadow: 0 1px 15px #b8c6db;
     }
 }
 
@@ -167,11 +210,17 @@ span.tittle {
 
 .preview-container #previews.collection .dz-error-message {
     font-size : 0.8em;
-    margin-top: -12px;
+    /* margin-top: -12px; */
     color     : #F44336;
 }
 
 
+.preview-container #previews.collection .dz-success-message {
+    font-size : 0.8em;
+    margin-top: -12px;
+    color     : #047857;
+
+}
 
 /*media queries*/
 
@@ -186,9 +235,15 @@ span.tittle {
 }
 
 .preview-container #previews.collection .dz-error-message {
-    font-size : 1rem;
+    font-size : 1.2rem;
     margin-top: -1px;
     color     : #F44336;
+}
+
+.preview-container #previews.collection .dz-success-message {
+    color: #10B981;
+    font-size : 1.2rem;
+    margin-top: -7px;
 }
 
 .zdrop-template {
@@ -201,4 +256,60 @@ span.tittle {
 
 .mtt {
     margin-top: 3rem;
+}
+
+.bottom-part {
+    display: flex;
+    justify-content: space-between;
+}
+
+.speed-container {
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.speed-icon {
+    height: auto;
+    width: 23px;
+}
+
+.speed-container p {
+    font-weight: 500;
+}
+
+.topmargin {
+    margin-top: 4rem;
+}
+
+.clipboard-url {
+
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    max-width         : 275px;
+    width             : 100%;
+    cursor            : pointer;
+    background-color  : #eaeaeb;
+    border            : none;
+    color             : #6c6c6c;
+    font-size         : 14px;
+    border-radius     : 5px !important;
+    padding           : 8px 45px 8px 15px;
+    font-family       : 'Montserrat', sans-serif;
+    box-shadow        : 0 1px 15px #b8c6db;
+    -moz-box-shadow   : 0 1px 15px #b8c6db;
+    -webkit-box-shadow: 0 1px 15px #b8c6db;
+}
+
+
+.copy-input-url {
+    margin-top: 10px !important;
+
+}
+
+.after-upload {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #e0e0e0;
 }
