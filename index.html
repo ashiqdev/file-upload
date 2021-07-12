@@ -43,7 +43,7 @@
 
       <div class="bg-gradient">
         <main class="col s12">
-          <div class="row">
+          <div>
             <div class="filuploader-container">
               <!-- Uploader Dropzone -->
               <form
@@ -57,7 +57,63 @@
                 </div>
                 <span class="tittle">Click the Button or Drop Files Here</span>
               </form>
+
             </div>
+
+
+            <div class="preview-container">
+              <div class="collection card" id="previews">
+                <div
+                  class="
+                    collection-item
+                    clearhack
+                    valign-wrapper
+                    item-template
+                  "
+                  id="zdrop-template"
+                >
+                  <div class="left pv zdrop-inf" data-dz-thumbnail>
+                    <div class="file-items">
+                      <span class="file-drop-icon">
+                        <img src="./img/document2.svg" alt="" />
+                      </span>
+                      <span class="file-drop-name" data-dz-name
+                        >lopremipsum.pdf</span
+                      >
+                      <span class="file-drop-size" data-dz-size>3.4Mb</span>
+                    </div>
+
+                    <div class="progress">
+                      <div
+                        class="determinate"
+                        style="width: 0"
+                        data-dz-uploadprogress
+                      ></div>
+                    </div>
+                    <div class="bottom-part">
+                      <div class="dz-error-message">
+                        <span data-dz-errormessage
+                          >Server responded with 405 code</span
+                        >
+                      </div>
+                      <div class="speed-container">
+                        <img
+                          src="./img/upspeed.svg"
+                          class="speed-icon"
+                          alt=""
+                        />
+                        <p>500 kbp/s</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, voluptas?
+            </div> -->
+
             <!-- Preview collection of uploaded documents -->
             <!-- <div class="preview-container">
               <div class="collection card" id="previews">
@@ -73,7 +129,6 @@
                       <span class="file-drop-name" data-dz-name></span>
                       <span class="file-drop-size" data-dz-size></span>
                     </div>
-
                     <div class="progress">
                       <div
                         class="determinate"
@@ -437,7 +492,7 @@
       </div>
 
       <!-- info section -->
-      <div data-easy-reveal="fade-in-down"  class="app-info-container">
+      <div data-easy-reveal="fade-in-down" class="app-info-container">
         <div class="info-card">
           <div class="card-img-container">
             <div data-aos="fade-right" class="anim">

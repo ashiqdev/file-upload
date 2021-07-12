@@ -17,7 +17,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./drop.css" />
+    <link rel="stylesheet" href="./preview.css" />
   </head>
   <body>
     <div class="preview-container">
@@ -46,10 +46,17 @@
               <div class="dz-error-message">
                 <span data-dz-errormessage>Server responded with 405 code</span>
               </div>
+              <div class="speed-container">
+                <img src="./img/upspeed.svg" class="speed-icon" alt="" />
+                <p>500 kbp/s</p>
+              </div>
             </div>
           </div>
         </div>
+        
       </div>
+
+      
     </div>
 
     <!-- after upload is complete -->
@@ -101,14 +108,15 @@
                 <span data-dz-errormessage>Uploaded successfully</span>
               </div>
 
-              <div class="speed-container">
+              <!-- <div class="speed-container">
                 <img src="./img/upspeed.svg" class="speed-icon" alt="" />
                 <p>500 kbp/s</p>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="./drop.js"></script>
   </body>
 </html>

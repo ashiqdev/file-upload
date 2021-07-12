@@ -47,6 +47,8 @@ a {
     justify-content : space-between;
     font-size       : 15px;
     padding         : 7px;
+    position: relative;
+    z-index: 8000;
 }
 
 .dow {
@@ -169,7 +171,7 @@ p {
 /* stats */
 
 .statistics-wrapper {
-    position           : relative;
+    /* position           : relative; */
     padding-left       : 3rem;
     padding-right      : 3rem;
     background         : linear-gradient(to right, #7f00ff, #e100ff);
@@ -183,6 +185,7 @@ p {
     display        : flex;
     flex-direction : row;
     justify-content: space-between;
+    margin-top: -1rem !important;
 }
 
 @media only screen and (max-width: 78.15em) {
@@ -714,7 +717,7 @@ h6 {
 
 .bg-gradient {
     background: linear-gradient(to right, #7f00ff, #e100ff);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 
     /* padding-top      : 10rem; */
     /* padding-bottom: 2rem; */

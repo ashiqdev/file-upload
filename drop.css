@@ -5,7 +5,7 @@
 .filuploader-container {
     display        : flex;
     width          : 100vw !important;
-    height         : 85vh;
+    height         : 100vh;
     flex-direction : column;
     justify-content: center !important;
     align-items    : center !important;
@@ -20,7 +20,7 @@
     .preview-container {
         width: 80% !important;
         /* font-size: 2rem !important; */
-    }
+    }-co
 
     .preview-container #previews.collection .dz-error-message {
         font-size : 1.4rem !important;
@@ -162,10 +162,13 @@ span.tittle {
 .preview-container {
     position     : relative;
     bottom       : 0px;
-    width        : 35%;
+    width        : 61%;
     margin       : auto;
     top          : 25px;
-    /* visibility: hidden; */
+    left: 10px !important;
+    z-index: 1;
+    visibility: hidden;
+    /* display: none; */
 }
 
 .preview-container #previews {
