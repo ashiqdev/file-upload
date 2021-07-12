@@ -1,134 +1,3 @@
-// let dropArea = document.getElementById('drop-area');
-// let filesDone = 0;
-// let filesToDo = 0;
-// let progressBar = document.getElementById('progress-bar');
-
-// function preventDefaults(e) {
-//   e.preventDefault();
-//   e.stopPropagation();
-// }
-
-// ['dragenter', 'dragover', 'dragleave', 'drop'].forEach((eventName) => {
-//   dropArea.addEventListener(eventName, preventDefaults, false);
-// });
-
-// // indicator
-
-// function highlight(e) {
-//   dropArea.classList.add('.highlight');
-// }
-
-// function unhighlight(e) {
-//   dropArea.classList.remove('.highlight');
-// }
-
-// ['dragenter', 'dragover'].forEach((eventName) => {
-//   dropArea.addEventListener(eventName, highlight, false);
-// });
-
-// ['dragleave', 'drop'].forEach((eventName) => {
-//   dropArea.addEventListener(eventName, unhighlight, false);
-// });
-
-// //  things to do after the file is dropped
-// function handleDrop(e) {
-//   let dt = e.dataTransfer;
-//   let files = dt.files;
-//   console.log(files);
-
-//   handleFiles(files);
-// }
-
-// dropArea.addEventListener('drop', handleDrop, false);
-
-// function handleFiles(files) {
-//   files = [...files];
-//   initializeProgress(files.length);
-//   files.forEach(uploadFile);
-//   files.forEach(previewFile);
-// }
-
-// // real game
-// // function uploadFile(file) {
-// //   let url = 'backend url';
-// //   let formData = new FormData();
-
-// //   formData.append('file', file);
-
-// //   fetch(url, {
-// //     method: 'POST',
-// //     body: formData,
-// //   })
-// //     .then(() => {
-
-// //     })
-// //     .catch((error) => console.log(error));
-// // }
-
-// // real game
-// function uploadFile(file, i) {
-//   // <- Add `i` parameter
-//   var url = 'https://api.cloudinary.com/v1_1/joezimim007/image/upload';
-//   var xhr = new XMLHttpRequest();
-//   var formData = new FormData();
-//   xhr.open('POST', url, true);
-
-//   // Add following event listener
-//   xhr.upload.addEventListener('progress', function (e) {
-//     updateProgress(i, (e.loaded * 100.0) / e.total || 100);
-//   });
-
-//   xhr.addEventListener('readystatechange', function (e) {
-//     if (xhr.readyState == 4 && xhr.status == 200) {
-//       // Done. Inform the user
-//     } else if (xhr.readyState == 4 && xhr.status != 200) {
-//       // Error. Inform the user
-//     }
-//   });
-
-//   //   cdnary specific
-//   formData.append('upload_preset', 'ujpu6gyk');
-
-//   formData.append('file', file);
-//   xhr.send(formData);
-// }
-
-// function previewFile(file) {
-//   let reader = new FileReader();
-//   reader.readAsDataURL(file);
-
-//   reader.onloadend = function () {
-//     let img = document.createElement('img');
-//     img.src = reader.result;
-//     document.getElementById('gallery').appendChild(img);
-//   };
-// }
-
-// // progress bar
-// function initializeProgress(numFiles) {
-//   //   progressBar.value = 0;
-//   //   filesDone = 0;
-//   //   filesToDo = numfiles;
-//   progressBar.value = 0;
-//   uploadProgress = [];
-
-//   for (let i = numFiles; i > 0; i--) {
-//     uploadProgress.push(0);
-//   }
-// }
-
-// function updateProgress(fileNumber, percent) {
-//   uploadProgress[fileNumber] = percent;
-//   let total =
-//     uploadProgress.reduce((tot, curr) => tot + curr, 0) / uploadProgress.length;
-//   progressBar.value = total;
-// }
-
-// function progressDone() {
-//   filesDone++;
-//   progressBar.value = (filesDone / filesToDo) * 100;
-// }
-
 // // statistics
 const first = document.getElementById('number1');
 const second = document.getElementById('number2');
@@ -152,4 +21,64 @@ const countDownStarter = () => {
 
 ScrollReveal().reveal('.statistics-container', {
   beforeReveal: countDownStarter,
+});
+
+// modal
+
+const modal = document.querySelector('.m-modal');
+const modal2 = document.querySelector('.m-modal2');
+
+const overlay = document.querySelector('.overlay');
+const btnCloseModal = document.querySelector('.close-modal');
+
+const closeModal = () => {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+  modal2.classList.add('hidden');
+};
+
+const closeExpiryModal = () => {
+  modal2.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+const openModal = () => {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+
+const openExpiryModal = () => {
+  modal2.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+
+const passwordButton = document.querySelector('.password-button');
+
+passwordButton.addEventListener('click', openModal);
+
+btnCloseModal.addEventListener('click', () => {
+  console.log('clicked');
+  closeModal();
+});
+
+overlay.addEventListener('click', closeModal);
+
+const passwordGenerator = document.querySelector('.password-generate-button');
+
+const expirtyGenarator = document.querySelector('.expiry-button');
+
+passwordGenerator.addEventListener('click', () => {
+  closeModal();
+
+  swal('Great!', 'Your file is now password protected!', 'success');
+});
+
+expirtyGenarator.addEventListener('click', () => {
+  openExpiryModal();
+});
+
+const expiryCloseButton = document.querySelector('.danger-me');
+
+expiryCloseButton.addEventListener('click', () => {
+  closeExpiryModal();
 });

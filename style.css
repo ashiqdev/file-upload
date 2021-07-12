@@ -22,16 +22,16 @@ html {
 }
 
 body {
-    font-family         : -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, noto sans, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji !important;
-    font-weight         : 400;
-    line-height         : 1.6;
-    color               : #615551;
-    background-size     : cover;
-    background-repeat   : no-repeat;
-    min-height          : calc(100vh - 2 * 4vw);
-    position            : relative;
-    overflow-x          : hidden;
-    /* background-color : #f9f5f3 !important; */
+    font-family      : -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, noto sans, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji !important;
+    font-weight      : 400;
+    line-height      : 1.6;
+    color            : #615551;
+    background-size  : cover;
+    background-repeat: no-repeat;
+    min-height       : calc(100vh - 2 * 4vw);
+    position         : relative;
+    overflow-x       : hidden;
+    background-color : #f9f5f3 !important;
 }
 
 a {
@@ -47,8 +47,8 @@ a {
     justify-content : space-between;
     font-size       : 15px;
     padding         : 7px;
-    position: relative;
-    z-index: 8000;
+    position        : relative;
+    z-index         : 8000;
 }
 
 .dow {
@@ -176,8 +176,8 @@ p {
     padding-right      : 3rem;
     background         : linear-gradient(to right, #7f00ff, #e100ff);
     /* padding-top     : 3rem; */
-    /* margin-top      : -290px; */
-    /* margin-top      : -140px; */
+    margin-top         : -3rem;
+
 }
 
 
@@ -185,7 +185,7 @@ p {
     display        : flex;
     flex-direction : row;
     justify-content: space-between;
-    margin-top: -1rem !important;
+    margin-top     : -1rem !important;
 }
 
 @media only screen and (max-width: 78.15em) {
@@ -716,7 +716,7 @@ h6 {
 }
 
 .bg-gradient {
-    background: linear-gradient(to right, #7f00ff, #e100ff);
+    background   : linear-gradient(to right, #7f00ff, #e100ff);
     /* overflow-x: hidden; */
 
     /* padding-top      : 10rem; */
@@ -1583,6 +1583,8 @@ b {
     background-color: #f9f5f3 !important;
     margin-top      : -40rem;
     padding-top     : 32rem;
+    position        : relative;
+    z-index         : -3000;
 
 }
 
@@ -1760,7 +1762,183 @@ b {
 }
 
 .label {
-    display: block;
-    font-size: 1.3rem;
+    display   : block;
+    font-size : 1.3rem;
     margin-top: 1rem;
 }
+
+
+/* modal related styles */
+
+.m-modal.hidden {
+    display: none;
+
+}
+
+.m-modal2:hidden {
+    display: none;
+}
+
+.m-modal, .m-modal2 {
+    position  : fixed !important;
+    /* opacity   : 1 !important; */
+    visibility: visible;
+    top       : 50% !important;
+    left      : 50% !important;
+    transform : translate(-50%, -50%) !important;
+    width     : 30%;
+
+    background-color: #e0e0e0;
+    padding         : 6rem;
+    border-radius   : 5px;
+    box-shadow      : 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index         : 50000;
+    font-size       : 1.4rem;
+    transition      : all 0.2s ease-in-out;
+}
+
+
+@media only screen and (max-width: 78.15em) {
+    .m-modal, .m-modal2 {
+        top  : 50%;
+        width: 80%;
+
+    }
+
+}
+
+.overlay {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter : blur(3px);
+    z-index         : 5;
+}
+
+.swal-overlay {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+
+}
+
+.show-modal {
+    font-size       : 2rem;
+    font-weight     : 600;
+    padding         : 1.75rem 3.5rem;
+    margin          : 5rem 2rem;
+    border          : none;
+    background-color: #fff;
+    color           : #444;
+    border-radius   : 10rem;
+    cursor          : pointer;
+}
+
+.close-modal {
+    position  : absolute;
+    top       : 0rem;
+    right     : 2rem;
+    font-size : 5rem;
+    color     : #333;
+    cursor    : pointer;
+    border    : none;
+    background: none;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity   : 0;
+}
+
+.hidden {
+    /* display: none; */
+    opacity: 0;
+}
+
+
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color  : #4B5563;
+    opacity: 1;
+    /* Firefox */
+}
+
+.pass-icon, .expired-icon {
+    font-size: 1.7rem !important;
+    margin-right: .6rem;
+    vertical-align: middle;
+}
+
+
+/* sweet modal */
+
+
+.swal-modal {
+    width: 478px;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #f9f5f3;
+    text-align: center;
+    border-radius: 5px;
+    position: static;
+    margin: 20px auto;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    z-index: 10001;
+    transition: opacity .2s,-webkit-transform .3s;
+    transition: transform .3s,opacity .2s;
+    transition: transform .3s,opacity .2s,-webkit-transform .3s;
+}
+
+.swal-icon--success:after, .swal-icon--success:before {
+    background: none !important;
+}
+
+.swal-icon--success__hide-corners {
+   background: none !important;
+}
+
+.swal-footer {
+    text-align: center;
+}
+
+.swal-button {
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+    padding: 10px 24px;
+    margin         : 10px;
+    text-align     : center;
+    text-transform : uppercase;
+    transition     : 0.5s;
+    background-size: 200% auto;
+    color          : white;
+    box-shadow     : 0 0 20px #eee;
+    border-radius  : 10px;
+    display        : block;
+    border         : none !important;
+}
+
+.swal-button:not([disabled]):hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color              : #fff;
+    text-decoration    : none;
+}
+
+input#filepicker::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+  }
+
+  #filepicker {
+      margin-top: 2rem;
+      padding: 0 !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+  }

@@ -16,12 +16,12 @@
     />
 
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
 
@@ -65,9 +65,7 @@
                 </div>
                 <span class="tittle">Click the Button or Drop Files Here</span>
               </form>
-
             </div>
-
 
             <div class="preview-container topmargin after-upload">
               <div class="collection card after-upload" id="previews">
@@ -80,18 +78,33 @@
                       <span class="file-drop-icon">
                         <img src="./img/document2.svg" alt="" />
                       </span>
-                      <span class="file-drop-name" data-dz-name>lopremipsum.pdf</span>
+                      <span class="file-drop-name" data-dz-name
+                        >lopremipsum.pdf</span
+                      >
                       <span class="file-drop-size" data-dz-size>3.4Mb</span>
                     </div>
 
-                    <!-- <div class="extra-button-container">
-                      <button>Password Protect</button>
-                      <button>Expiry Date</button>
-                    </div> -->
-        
+                    <div class="extra-button-container">
+                      <button class="password-button">
+                        <i class="fas fa-key pass-icon"></i>
+                        <span>passsword protect</span>
+                      </button>
+                      <button class="expiry-button">
+                        <i class="fas fa-clock expired-icon"></i>
+                        <span>Expiry Date</span>
+                      </button>
+
+                      <button class="limit-button">
+                        <i class="fas fa-clock expired-icon"></i>
+                        <span>Download Limit</span>
+                      </button>
+                    </div>
+
                     <!-- download and copy icon -->
                     <div class="clipboard-url">
-                      <label class="label" for="copyClipboard">Download Link</label>
+                      <label class="label" for="copyClipboard"
+                        >Download Link</label
+                      >
                       <input
                         class="copy-input-url"
                         value="https://www.test.com"
@@ -102,7 +115,7 @@
                         <i class="far fa-copy"></i>
                       </button>
                     </div>
-        
+
                     <!-- edit-icon -->
                     <div class="clipboard-url">
                       <label class="label" for="edit">Edit File Link</label>
@@ -113,16 +126,14 @@
                         readonly
                       />
                       <button class="copy-btn" id="copyButton" onclick="copy()">
-                        <i class="far fa-edit"></i>
+                        <i class="far fa-copy"></i>
                       </button>
                     </div>
-        
+
                     <div class="bottom-part">
                       <div class="dz-success-message">
                         <span data-dz-errormessage>Uploaded successfully</span>
                       </div>
-        
-                
                     </div>
                   </div>
                 </div>
@@ -686,6 +697,35 @@
       </div>
     </div>
 
+    <div class="m-modal hidden">
+      <div class="">
+        <button class="close-modal">&times;</button>
+        <div class="clipboard--password-url">
+          <input
+            type="password"
+            class="password-input-url"
+            placeholder="enter password"
+            id="copyClipboard"
+          />
+        </div>
+        <p class="password-error-message">password is not created</p>
+        <button class="password-generate-button">Submit</button>
+      </div>
+    </div>
+
+    <div class="m-modal2 hidden">
+     <div>
+      <button class="close-modal danger-me">&times;</button>
+
+      <div class="">
+        <input type="date"  id="filepicker" >
+        <button class="password-generate-button">Submit</button>
+      </div>
+     </div>
+    </div>
+
+    <div class="overlay hidden"></div>
+
     <!-- js files -->
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -698,6 +738,8 @@
     <script>
       AOS.init();
     </script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script src="./animtation/js/jquery.easy-reveal.min.js"></script>
 
