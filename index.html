@@ -61,15 +61,10 @@
             </div>
 
 
-            <div class="preview-container">
-              <div class="collection card" id="previews">
+            <div class="preview-container topmargin after-upload">
+              <div class="collection card after-upload" id="previews">
                 <div
-                  class="
-                    collection-item
-                    clearhack
-                    valign-wrapper
-                    item-template
-                  "
+                  class="collection-item clearhack valign-wrapper item-template"
                   id="zdrop-template"
                 >
                   <div class="left pv zdrop-inf" data-dz-thumbnail>
@@ -77,33 +72,47 @@
                       <span class="file-drop-icon">
                         <img src="./img/document2.svg" alt="" />
                       </span>
-                      <span class="file-drop-name" data-dz-name
-                        >lopremipsum.pdf</span
-                      >
+                      <span class="file-drop-name" data-dz-name>lopremipsum.pdf</span>
                       <span class="file-drop-size" data-dz-size>3.4Mb</span>
                     </div>
-
-                    <div class="progress">
-                      <div
-                        class="determinate"
-                        style="width: 0"
-                        data-dz-uploadprogress
-                      ></div>
+        
+                    <!-- download and copy icon -->
+                    <div class="clipboard-url">
+                      <label class="label" for="copyClipboard">Download Link</label>
+                      <input
+                        class="copy-input-url"
+                        value="https://www.test.com"
+                        id="copyClipboard"
+                        readonly
+                      />
+                      <button class="copy-btn" id="copyButton" onclick="copy()">
+                        <i class="far fa-copy"></i>
+                      </button>
                     </div>
+        
+                    <!-- edit-icon -->
+                    <div class="clipboard-url">
+                      <label class="label" for="edit">Edit File Link</label>
+                      <input
+                        class="copy-input-url"
+                        value="https://www.test.com"
+                        id="edit"
+                        readonly
+                      />
+                      <button class="copy-btn" id="copyButton" onclick="copy()">
+                        <i class="far fa-edit"></i>
+                      </button>
+                    </div>
+        
                     <div class="bottom-part">
-                      <div class="dz-error-message">
-                        <span data-dz-errormessage
-                          >Server responded with 405 code</span
-                        >
+                      <div class="dz-success-message">
+                        <span data-dz-errormessage>Uploaded successfully</span>
                       </div>
-                      <div class="speed-container">
-                        <img
-                          src="./img/upspeed.svg"
-                          class="speed-icon"
-                          alt=""
-                        />
+        
+                      <!-- <div class="speed-container">
+                        <img src="./img/upspeed.svg" class="speed-icon" alt="" />
                         <p>500 kbp/s</p>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
