@@ -182,10 +182,12 @@ p {
 
 
 .statistics-container {
+    max-width: 1200px;
     display        : flex;
     flex-direction : row;
     justify-content: space-between;
-    margin-top     : -1rem !important;
+    /* margin-top     : -1rem !important; */
+    margin: 0 auto;
 }
 
 @media only screen and (max-width: 78.15em) {
@@ -233,12 +235,24 @@ p {
 }
 
 .countdoun {
-    padding-top: 2rem;
     color      : #fff;
+    border-radius: 50%;
+}
+
+#number1 {
+    padding-top: 3rem;
+}
+
+ #number3 {
+    padding-top: 3.8rem;
+}
+
+#number2 {
+    padding-top: 4rem;
 }
 
 .counter-wrapper {
-    align-items    : center;
+    /* align-items    : center;
     display        : flex;
     justify-content: center;
     margin-top     : -6rem;
@@ -247,10 +261,11 @@ p {
     border-left    : 2px solid #fff;
     border-right   : 2px solid #fff;
     border-bottom  : 2px solid #fff;
-    border-radius  : 5px;
+    border-radius  : 5px; */
+    border-radius: 50%;
 }
 
-.counter-wrapper::before {
+/* .counter-wrapper::before {
     content         : '';
     position        : absolute;
     height          : 2px;
@@ -260,9 +275,9 @@ p {
     top             : 0;
     background-color: #fff;
     text-align      : center;
-}
+} */
 
-.counter-wrapper::after {
+/* .counter-wrapper::after {
     content         : '';
     position        : absolute;
     height          : 2px;
@@ -273,7 +288,7 @@ p {
     left            : auto;
     background-color: #fff;
 
-}
+} */
 
 .color-main {
     color       : #218392;
@@ -284,8 +299,15 @@ p {
 .firstBox,
 .secondBox,
 .thirdBox {
-    width        : 400px;
+    width        : 280px;
+    height: 280px;
     margin-bottom: 2rem;
+    position: relative;
+    border-radius: 50%;
+    /* border: 2px solid #fff; */
+    background-color   : rgba(0, 0, 0, 0.4);
+
+    
 }
 
 
