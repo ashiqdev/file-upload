@@ -18,12 +18,17 @@
         /* font-size: 2rem !important; */
     }
 
-    -co .preview-container #previews.collection .dz-error-message {
+    .preview-container #previews.collection .dz-error-message {
         font-size: 1.4rem !important;
     }
 
     .preview-container #previews.collection .dz-success-message {
         font-size: 1.4rem !important;
+    }
+
+    .pause-button {
+        padding  : 12px 8px !important;
+        font-size: 1.2rem !important;
     }
 
 
@@ -182,20 +187,20 @@ span.tittle {
 
 /** Preview of collections of uploaded documents **/
 .preview-container {
-    position     : relative;
-    bottom       : 0px;
-    width        : 61%;
-    margin       : auto;
-    top          : 25px;
-    left         : 10px !important;
-    z-index      : 1;
-    visibility   : hidden;
-    /* display   : none; */
-    border-radius: 1rem;
+    position        : relative;
+    bottom          : 0px;
+    width           : 61%;
+    margin          : auto;
+    top             : 25px;
+    left            : 10px;
+    z-index         : 1;
+    /* visibility   : hidden; */
+    display         : none;
+    border-radius   : 1rem;
 }
 
 .preview-container #previews {
-    max-height : 400px;
+    /* max-height : 400px; */
     /* overflow: auto;  */
 }
 
@@ -238,6 +243,7 @@ span.tittle {
     font-size    : 0.8em;
     /* margin-top: -12px; */
     color        : #F44336;
+    /* visibility: hidden; */
 }
 
 
@@ -256,7 +262,9 @@ span.tittle {
     }
 
     .preview-container {
-        width: 100%;
+        /* width: 100%; */
+        left: 0px;
+
     }
 }
 
@@ -358,6 +366,7 @@ input[type=password]:focus {
 
 .extra-button-container {
     display  : flex;
+    flex-wrap: wrap;
     /* width : 100%; */
     font-size: 1.2rem;
 }
@@ -365,13 +374,15 @@ input[type=password]:focus {
 
 
 /* password button */
-.password-button, .password-generate-button {
+.password-button,
+.password-generate-button {
     background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%)
 }
 
-.password-button, .password-generate-button {
-    display: flex;
-    align-items: center !important;
+.password-button,
+.password-generate-button {
+    display        : flex;
+    align-items    : center !important;
     justify-content: center;
     margin         : 10px;
     padding        : 15px 45px;
@@ -386,10 +397,25 @@ input[type=password]:focus {
     border         : none;
 }
 
+@media only screen and (max-width: 78.15em) {
+
+    .password-button,
+    .expiry-button,
+    .limit-button,
+    .delete-button {
+        /* padding: 10px 10px; */
+        width: 300px;
+    }
+
+    .extra-button-container {
+        justify-content: center;
+    }
+}
+
 
 .password-generate-button {
     padding: 10px 25px;
-    margin: 0 !important;
+    margin : 0 !important;
 
 }
 
@@ -434,26 +460,59 @@ input[type=password]:focus {
 /* limit button */
 
 
-.limit-button {background-image: linear-gradient(to right, #36D1DC 0%, #5B86E5  51%, #36D1DC  100%)}
 .limit-button {
-   margin: 10px;
-   padding: 15px 45px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
-   border: none;
-   display: block;
- }
+    background-image: linear-gradient(to right, #36D1DC 0%, #5B86E5 51%, #36D1DC 100%)
+}
 
- .limit-button:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
+.limit-button {
+    margin         : 10px;
+    padding        : 15px 45px;
+    text-align     : center;
+    text-transform : uppercase;
+    transition     : 0.5s;
+    background-size: 200% auto;
+    color          : white;
+    box-shadow     : 0 0 20px #eee;
+    border-radius  : 10px;
+    border         : none;
+    display        : block;
+}
+
+.limit-button:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color              : #fff;
+    text-decoration    : none;
+}
+
+
+/* delete button */
+
+
+.delete-button {
+    background-image: linear-gradient(to right, #D31027 0%, #EA384D 51%, #D31027 100%)
+}
+
+.delete-button {
+    margin         : 10px;
+    padding        : 15px 45px;
+    text-align     : center;
+    text-transform : uppercase;
+    transition     : 0.5s;
+    background-size: 200% auto;
+    color          : white;
+    box-shadow     : 0 0 20px #eee;
+    border-radius  : 10px;
+    border         : none;
+    display        : block;
+}
+
+.delete-button:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color              : #fff;
+    text-decoration    : none;
+}
 
 
 
@@ -484,7 +543,7 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-    border: none !important;
+    border    : none !important;
     box-shadow: none;
 }
 
@@ -497,8 +556,45 @@ input[type=datetime] {
 }
 
 .password-error-message {
-    margin-top: -12px;
+    margin-top    : -12px;
     padding-bottom: 1rem;
-    color: #F44336;
-    font-size: 1.2rem;
+    color         : #F44336;
+    font-size     : 1.2rem;
+}
+
+
+/* (pause/resume) button */
+
+.action-button-container {
+    display    : flex;
+    align-items: center;
+}
+
+
+.pause-button {
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%)
+}
+
+.pause-button {
+    margin         : 10px;
+    padding        : 13px 45px;
+    text-align     : center;
+    text-transform : uppercase;
+    transition     : 0.5s;
+    background-size: 200% auto;
+    color          : white !important;
+    box-shadow     : 0 0 20px #eee;
+    border-radius  : 10px;
+    border         : none;
+    display        : block;
+    font-size      : 1.3rem;
+    display        : flex;
+    align-items    : center;
+}
+
+.pause-button:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color              : #fff;
+    text-decoration    : none;
 }

@@ -44,12 +44,13 @@ const closeExpiryModal = () => {
 
 const openModal = () => {
   modal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
+  overlay.classList.remove('hidden'); 
 };
 
 const openExpiryModal = () => {
   modal2.classList.remove('hidden');
   overlay.classList.remove('hidden');
+  // $('.datepicker').datepicker();
 };
 
 const passwordButton = document.querySelector('.password-button');
@@ -82,3 +83,5 @@ const expiryCloseButton = document.querySelector('.danger-me');
 expiryCloseButton.addEventListener('click', () => {
   closeExpiryModal();
 });
+
+

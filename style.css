@@ -1846,6 +1846,11 @@ b {
     background: none;
 }
 
+.close-modal:active {
+    background: none !important;
+}
+
+
 .hidden {
     visibility: hidden;
     opacity   : 0;
@@ -1930,11 +1935,11 @@ b {
     text-decoration    : none;
 }
 
-input#filepicker::-webkit-calendar-picker-indicator {
+input.filepicker::-webkit-calendar-picker-indicator {
     cursor: pointer;
   }
 
-  #filepicker {
+  .filepicker {
       margin-top: 2rem;
       padding: 0 !important;
       padding-left: 1rem !important;

@@ -67,7 +67,8 @@
               </form>
             </div>
 
-            <div class="preview-container topmargin after-upload">
+            <!-- after file upload -->
+            <!-- <div class="preview-container topmargin after-upload">
               <div class="collection card after-upload" id="previews">
                 <div
                   class="collection-item clearhack valign-wrapper item-template"
@@ -95,12 +96,19 @@
                       </button>
 
                       <button class="limit-button">
-                        <i class="fa fa-download expired-icon" aria-hidden="true"></i>
+                        <i
+                          class="fa fa-download expired-icon"
+                          aria-hidden="true"
+                        ></i>
                         <span>Download Limit</span>
+                      </button>
+
+                      <button class="delete-button">
+                        <i class="far fa-trash-alt expired-icon"></i>
+                        <span>Delete File</span>
                       </button>
                     </div>
 
-                    <!-- download and copy icon -->
                     <div class="clipboard-url">
                       <label class="label" for="copyClipboard"
                         >Download Link</label
@@ -116,7 +124,6 @@
                       </button>
                     </div>
 
-                    <!-- edit-icon -->
                     <div class="clipboard-url">
                       <label class="label" for="edit">Edit File Link</label>
                       <input
@@ -138,14 +145,10 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <!-- <div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, voluptas?
             </div> -->
 
-            <!-- Preview collection of uploaded documents -->
-            <!-- <div class="preview-container">
+            <!-- before file upload -->
+            <div class="preview-container">
               <div class="collection card" id="previews">
                 <div
                   class="collection-item clearhack valign-wrapper item-template"
@@ -156,9 +159,12 @@
                       <span class="file-drop-icon">
                         <img src="./img/document2.svg" alt="" />
                       </span>
-                      <span class="file-drop-name" data-dz-name></span>
-                      <span class="file-drop-size" data-dz-size></span>
+                      <span class="file-drop-name" data-dz-name
+                        >lopremipsum.pdf</span
+                      >
+                      <span class="file-drop-size" data-dz-size>3.4Mb</span>
                     </div>
+
                     <div class="progress">
                       <div
                         class="determinate"
@@ -166,13 +172,33 @@
                         data-dz-uploadprogress
                       ></div>
                     </div>
-                    <div class="dz-error-message">
-                      <span data-dz-errormessage></span>
+                    <div class="bottom-part">
+                      <!-- <div class="dz-error-message">
+                        <span data-dz-errormessage
+                          >Server responded with 405 code</span
+                        >
+                      </div> -->
+
+                      <div class="action-button-container">
+                        <div class="speed-container">
+                          <img
+                            src="./img/upspeed.svg"
+                            class="speed-icon"
+                            alt=""
+                          />
+                          <p>500 kbp/s</p>
+                        </div>
+                      </div>
+
+                      <button class="pause-button">
+                        <i class="fas fa-pause expired-icon"></i>
+                        <span>Pause</span>
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
         </main>
       </div>
@@ -698,30 +724,32 @@
     </div>
 
     <div class="m-modal hidden">
-      <div class="">
-        <button class="close-modal">&times;</button>
-        <div class="clipboard--password-url">
-          <input
-            type="password"
-            class="password-input-url"
-            placeholder="enter password"
-            id="copyClipboard"
-          />
-        </div>
-        <p class="password-error-message">password is not created</p>
-        <button class="password-generate-button">Submit</button>
+      <div class="">< class="close-modal">&times;</div>
+      <div class="clipboard--password-url">
+        <input
+          type="password"
+          class="password-input-url"
+          placeholder="enter password"
+          id="copyClipboard"
+        />
       </div>
+      <p class="password-error-message">password is not created</p>
+      <button class="password-generate-button">Submit</button>
     </div>
+    <!-- </div> -->
 
     <div class="m-modal2 hidden">
-     <div>
-      <button class="close-modal danger-me">&times;</button>
+      <div>
+        <a class="close-modal danger-me">&times;</a>
 
-      <div class="">
-        <input type="date"  id="filepicker" >
-        <button class="password-generate-button">Submit</button>
+        <div class="">
+          <input type="date" class="filepicker" />
+
+          <input type="time" class="filepicker" />
+
+          <button class="password-generate-button">Submit</button>
+        </div>
       </div>
-     </div>
     </div>
 
     <div class="overlay hidden"></div>

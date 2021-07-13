@@ -82,11 +82,11 @@ const btn = document.querySelector('.upload-icon');
 
 btn.addEventListener('click', () => {
   console.log('hello');
-  $('.preview-container').css('visibility', 'visible');
+  $('.preview-container').css('display', 'block');
   // $('.filuploader-container').css('height', '2vh');
 
   var windowSize = $(window).width();
-console.log({ windowSize });
+  console.log({ windowSize });
 
   if (windowSize <= 414) {
     $('.filuploader-container').css('marginTop', '-140px');
@@ -102,4 +102,25 @@ console.log({ windowSize });
   $('.upload-icon').css('height', '50px');
   $('.tittle').hide();
   $('.upload-icon').css('top', '5%');
+});
+
+// Pause
+const pause = document.querySelector('.pause-button');
+
+console.log({ pause });
+
+pause && pasue.addEventListener('click', () => {
+  console.log('hm');
+  // pause.innerText = 'Resume';
+  if (pause.innerText === 'PAUSE') {
+    pause.innerHTML = `
+    <i class="fas fa-play expired-icon"></i>
+    <span>Resume</span>
+    `;
+  } else {
+    pause.innerHTML = `
+    <i class="fas fa-pause expired-icon"></i>
+    <span>Pause</span>
+    `;
+  }
 });
