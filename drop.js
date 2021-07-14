@@ -102,25 +102,39 @@ btn.addEventListener('click', () => {
   $('.upload-icon').css('height', '50px');
   $('.tittle').hide();
   $('.upload-icon').css('top', '5%');
+
+  $('.count').each(function () {
+    var $this = $(this);
+    jQuery({ Counter: 0 }).animate(
+      { Counter: $this.attr('data-stop') },
+      {
+        duration: 1600,
+        easing: 'swing',
+        step: function (now) {
+          $this.text(Math.ceil(now));
+        },
+      }
+    );
+  });
 });
+
 
 // Pause
 const pause = document.querySelector('.pause-button');
 
-console.log({ pause });
-
-pause && pasue.addEventListener('click', () => {
-  console.log('hm');
-  // pause.innerText = 'Resume';
-  if (pause.innerText === 'PAUSE') {
-    pause.innerHTML = `
+pause &&
+  pause.addEventListener('click', () => {
+    console.log('hm');
+    // pause.innerText = 'Resume';
+    if (pause.innerText === 'PAUSE') {
+      pause.innerHTML = `
     <i class="fas fa-play expired-icon"></i>
     <span>Resume</span>
     `;
-  } else {
-    pause.innerHTML = `
+    } else {
+      pause.innerHTML = `
     <i class="fas fa-pause expired-icon"></i>
     <span>Pause</span>
     `;
-  }
-});
+    }
+  });

@@ -22,8 +22,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.min.js" integrity="sha512-WV1qJjwco1X+rI/ySPPxa0Abco3mbckW7qEEyoio9013SNL8hEuqWKqPpP2uC8dwroyG7gIeZ3xBbuY3KIbRFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  
+    <script src="plugins/waypoints.min.js"></script>
+    <script src="plugins/counterup.min.js"></script>
+
+
 
     <link rel="stylesheet" href="./animtation/css/easy-reveal.min.css" />
     <link rel="stylesheet" href="./drop.css" />
@@ -212,7 +218,7 @@
                   </div>
                   <div id="first" class="item">
                     <div class="countdoun">
-                      <div id="number1">0</div>
+                      <div id="number1" class="count" data-stop="6583">6583</div>
                       <h6>
                         Registered<br />
                         Users
@@ -235,7 +241,7 @@
                   </div>
                   <div id="second" class="item">
                     <div class="countdoun">
-                      <div id="number2">0</div>
+                      <div id="number2" class="count" data-stop="69">69</div>
                       <h6>
                         File <br />
                         Uploads
@@ -259,7 +265,7 @@
                   </div>
                   <div id="third" class="item">
                     <div class="countdoun">
-                      <div id="number3">0</div>
+                      <div id="number3" class="count" data-stop="420">420</div>
                       <h6>
                         File <br />
                         Downloads
@@ -310,7 +316,7 @@
           </p>
         </div>
 
-        <div data-easy-reveal="fade-in-down" class="wrap-lookup">
+        <div data-aos="fade-up" class="wrap-lookup">
           <div class="container">
             <div class="flex-wrapper">
               <div class="lookup-card">
@@ -540,7 +546,7 @@
       </div>
 
       <!-- info section -->
-      <div data-easy-reveal="fade-in-down" class="app-info-container">
+      <div class="app-info-container">
         <div class="info-card">
           <div class="card-img-container">
             <div data-aos="fade-right" class="anim">
@@ -748,22 +754,20 @@
 
     <!-- js files -->
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.js"></script>
-    <script>
-      AOS.init();
-    </script>
-
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <script src="./animtation/js/jquery.easy-reveal.min.js"></script>
+    <!-- <script src="./animtation/js/jquery.easy-reveal.min.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="./main.js"></script>
     <script src="./drop.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

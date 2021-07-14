@@ -1,27 +1,6 @@
-// // statistics
-const first = document.getElementById('number1');
-const second = document.getElementById('number2');
-const third = document.getElementById('number3');
+// stats
 
-const countDownStarter = () => {
-  const countingFunc = (element, time) => {
-    const counter = new countUp.CountUp(element, time);
-
-    if (!counter.error) {
-      counter.start();
-    } else {
-      console.log(counter.error);
-    }
-  };
-
-  countingFunc(first, 6583);
-  countingFunc(second, 69);
-  countingFunc(third, 420);
-};
-
-ScrollReveal().reveal('.statistics-container', {
-  beforeReveal: countDownStarter,
-});
+$('.count').counterUp();
 
 // modal
 
@@ -44,7 +23,7 @@ const closeExpiryModal = () => {
 
 const openModal = () => {
   modal.classList.remove('hidden');
-  overlay.classList.remove('hidden'); 
+  overlay.classList.remove('hidden');
 };
 
 const openExpiryModal = () => {
@@ -55,7 +34,7 @@ const openExpiryModal = () => {
 
 const passwordButton = document.querySelector('.password-button');
 
-passwordButton.addEventListener('click', openModal);
+passwordButton && passwordButton.addEventListener('click', openModal);
 
 btnCloseModal.addEventListener('click', () => {
   console.log('clicked');
@@ -74,14 +53,13 @@ passwordGenerator.addEventListener('click', () => {
   swal('Great!', 'Your file is now password protected!', 'success');
 });
 
-expirtyGenarator.addEventListener('click', () => {
-  openExpiryModal();
-});
+expirtyGenarator &&
+  expirtyGenarator.addEventListener('click', () => {
+    openExpiryModal();
+  });
 
 const expiryCloseButton = document.querySelector('.danger-me');
 
 expiryCloseButton.addEventListener('click', () => {
   closeExpiryModal();
 });
-
-
