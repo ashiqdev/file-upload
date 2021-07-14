@@ -1,6 +1,5 @@
 // stats
-
-// $('.count').counterUp();
+$('.count').counterUp();
 
 // animation
 
@@ -86,4 +85,10 @@ const expiryCloseButton = document.querySelector('.danger-me');
 
 expiryCloseButton.addEventListener('click', () => {
   closeExpiryModal();
+});
+
+document.addEventListener('click', function (event) {
+  if (!event.target.matches('.preview-container')) {
+    // $('.count').counterUp();
+  }
 });

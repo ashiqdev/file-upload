@@ -82,16 +82,19 @@ const btn = document.querySelector('.upload-icon');
 
 var isClicked = false;
 
-
 btn.addEventListener('click', () => {
   console.log('hello');
   $('.preview-container').css('display', 'block');
+  $('.statistics-wrapper').css('display', 'none');
+  $('.duplicate').css('display', 'block');
+
+
+  var isVisible =
+    document.querySelector('.preview-container').style.display === 'block';
   // $('.filuploader-container').css('height', '2vh');
-  isVisible = true;
 
   var windowSize = $(window).width();
   console.log({ windowSize });
-
 
   if (windowSize <= 414) {
     $('.filuploader-container').css('marginTop', '-140px');
@@ -113,11 +116,13 @@ btn.addEventListener('click', () => {
   $('.tittle').hide();
   $('.upload-icon').css('top', '5%');
 
-  const scriptt = $('initJs');
-  console.log({ scriptt });
+  // if (isVisible) {
+  //   console.log('ki');
+  //   $('#dangerous').remove();
+  // }
 
   if (!isClicked) {
-    $('.count').each(function () {
+    $('.count-me').each(function () {
       var $this = $(this);
       isClicked = true;
       jQuery({ Counter: 0 }).animate(
@@ -131,16 +136,9 @@ btn.addEventListener('click', () => {
         }
       );
     });
+  } else {
   }
 });
-
-// $(document).ready(function ()
-
-// $(document).ready(function() {
-//   if(!isClicked) {
-//     $('.count').counterUp();
-//   }
-// })
 
 // Pause
 const pause = document.querySelector('.pause-button');

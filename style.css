@@ -180,6 +180,10 @@ p {
 
 }
 
+.duplicate {
+    display: none;
+}
+
 
 .statistics-container {
     max-width         : 1200px;
