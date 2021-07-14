@@ -1,5 +1,6 @@
 // stats
 
+// $('.count').counterUp();
 
 // animation
 

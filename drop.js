@@ -81,17 +81,17 @@
 const btn = document.querySelector('.upload-icon');
 
 var isClicked = false;
-var fileName = false;
+
 
 btn.addEventListener('click', () => {
   console.log('hello');
   $('.preview-container').css('display', 'block');
   // $('.filuploader-container').css('height', '2vh');
-  fileName = true;
-  
+  isVisible = true;
 
   var windowSize = $(window).width();
   console.log({ windowSize });
+
 
   if (windowSize <= 414) {
     $('.filuploader-container').css('marginTop', '-140px');
@@ -133,11 +133,6 @@ btn.addEventListener('click', () => {
     });
   }
 });
-
-
-if (!fileName) {
-  $('.count').counterUp();
-}
 
 // $(document).ready(function ()
 
