@@ -171,7 +171,7 @@ p {
 /* stats */
 
 .statistics-wrapper {
-    /* position           : relative; */
+    position           : relative;
     padding-left       : 3rem;
     padding-right      : 3rem;
     background         : linear-gradient(to right, #7f00ff, #e100ff);
@@ -187,6 +187,9 @@ p {
     flex-direction : row;
     justify-content: space-between;
     /* margin-top     : -1rem !important; */
+    margin-top         : -8rem !important;
+    padding-bottom: 6rem;
+
     margin: 0 auto;
 }
 
@@ -221,9 +224,17 @@ p {
 
 @media only screen and (min-width: 1600px) {
     .statistics-wrapper {
-        margin-top: -60px;
+        z-index: 9000;
 
 
+    }
+
+    .statistics-container {
+        /* margin-top     : -1rem !important; */
+        margin-top         : -6rem !important;
+        /* padding-bottom: 6rem; */
+    
+        margin: 0 auto;
     }
 }
 
@@ -740,6 +751,7 @@ h6 {
 .bg-gradient {
     background   : linear-gradient(to right, #7f00ff, #e100ff);
     /* overflow-x: hidden; */
+    min-height: 70vh;
 
     /* padding-top      : 10rem; */
     /* padding-bottom: 2rem; */

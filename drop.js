@@ -91,14 +91,20 @@ btn.addEventListener('click', () => {
   if (windowSize <= 414) {
     $('.filuploader-container').css('marginTop', '-140px');
   } else if (windowSize <= 1250) {
-    $('.filuploader-container').css('marginTop', '0');
+    $('.filuploader-container').css('marginTop', '-30px');
   } else {
     $('.filuploader-container').css('marginTop', '-140px');
+    // $('.statistics-wrapper').css('marginTop', '-160px');
+  }
+
+  if(windowSize >= 1500) {
+    $('.statistics-wrapper').css('marginTop', '-160px');
+     
   }
 
   $('.filuploader-container').animate({ height: '300px' }, 1000);
   $('.fileuploader').css('marginTop', '22rem');
-  $('.statistics-wrapper').css('paddingTop', '100px');
+  $('.statistics-wrapper').css('paddingTop', '180px');
   $('.upload-icon').css('height', '50px');
   $('.tittle').hide();
   $('.upload-icon').css('top', '5%');
@@ -117,7 +123,6 @@ btn.addEventListener('click', () => {
     );
   });
 });
-
 
 // Pause
 const pause = document.querySelector('.pause-button');
