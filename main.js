@@ -16,7 +16,7 @@ $(document).ready(function () {
 
   $('.app-info-container').waypoint(
     function (direction) {
-      $('.app-info-container').addClass('animate__animated animate__fadeIn');
+      $('.app-info-container').addClass('animate__animated animate__headShake');
     },
     {
       offset: '600px',
