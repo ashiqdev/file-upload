@@ -80,10 +80,15 @@
 
 const btn = document.querySelector('.upload-icon');
 
+var isClicked = false;
+var fileName = false;
+
 btn.addEventListener('click', () => {
   console.log('hello');
   $('.preview-container').css('display', 'block');
   // $('.filuploader-container').css('height', '2vh');
+  fileName = true;
+  
 
   var windowSize = $(window).width();
   console.log({ windowSize });
@@ -97,9 +102,8 @@ btn.addEventListener('click', () => {
     // $('.statistics-wrapper').css('marginTop', '-160px');
   }
 
-  if(windowSize >= 1500) {
+  if (windowSize >= 1500) {
     $('.statistics-wrapper').css('marginTop', '-160px');
-     
   }
 
   $('.filuploader-container').animate({ height: '300px' }, 1000);
@@ -109,20 +113,39 @@ btn.addEventListener('click', () => {
   $('.tittle').hide();
   $('.upload-icon').css('top', '5%');
 
-  // $('.count').each(function () {
-  //   var $this = $(this);
-  //   jQuery({ Counter: 0 }).animate(
-  //     { Counter: $this.attr('data-stop') },
-  //     {
-  //       duration: 1600,
-  //       easing: 'swing',
-  //       step: function (now) {
-  //         $this.text(Math.ceil(now));
-  //       },
-  //     }
-  //   );
-  // });
+  const scriptt = $('initJs');
+  console.log({ scriptt });
+
+  if (!isClicked) {
+    $('.count').each(function () {
+      var $this = $(this);
+      isClicked = true;
+      jQuery({ Counter: 0 }).animate(
+        { Counter: $this.attr('data-stop') },
+        {
+          duration: 1600,
+          easing: 'swing',
+          step: function (now) {
+            $this.text(Math.ceil(now));
+          },
+        }
+      );
+    });
+  }
 });
+
+
+if (!fileName) {
+  $('.count').counterUp();
+}
+
+// $(document).ready(function ()
+
+// $(document).ready(function() {
+//   if(!isClicked) {
+//     $('.count').counterUp();
+//   }
+// })
 
 // Pause
 const pause = document.querySelector('.pause-button');
