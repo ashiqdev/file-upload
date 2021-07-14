@@ -2,6 +2,28 @@
 
 $('.count').counterUp();
 
+// animation
+
+$(document).ready(function () {
+  $('.wrap-lookup').waypoint(
+    function (direction) {
+      $('.wrap-lookup').addClass('animate__animated animate__fadeIn');
+    },
+    {
+      offset: '600px',
+    }
+  );
+
+  $('.app-info-container').waypoint(
+    function (direction) {
+      $('.app-info-container').addClass('animate__animated animate__fadeIn');
+    },
+    {
+      offset: '600px',
+    }
+  );
+});
+
 // modal
 
 const modal = document.querySelector('.m-modal');

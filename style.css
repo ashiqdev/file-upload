@@ -182,13 +182,13 @@ p {
 
 
 .statistics-container {
-    max-width: 1200px;
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
+    max-width         : 1200px;
+    display           : flex;
+    flex-direction    : row;
+    justify-content   : space-between;
     /* margin-top     : -1rem !important; */
-    margin-top         : -8rem !important;
-    padding-bottom: 6rem;
+    margin-top        : -8rem !important;
+    padding-bottom    : 6rem;
 
     margin: 0 auto;
 }
@@ -231,9 +231,9 @@ p {
 
     .statistics-container {
         /* margin-top     : -1rem !important; */
-        margin-top         : -6rem !important;
+        margin-top       : -6rem !important;
         /* padding-bottom: 6rem; */
-    
+
         margin: 0 auto;
     }
 }
@@ -246,7 +246,7 @@ p {
 }
 
 .countdoun {
-    color      : #fff;
+    color        : #fff;
     border-radius: 50%;
 }
 
@@ -254,7 +254,7 @@ p {
     padding-top: 3rem;
 }
 
- #number3 {
+#number3 {
     padding-top: 3.8rem;
 }
 
@@ -310,15 +310,15 @@ p {
 .firstBox,
 .secondBox,
 .thirdBox {
-    width        : 280px;
-    height: 280px;
-    margin-bottom: 2rem;
-    position: relative;
-    border-radius: 50%;
-    /* border: 2px solid #fff; */
-    background-color   : rgba(0, 0, 0, 0.4);
+    width           : 280px;
+    height          : 280px;
+    margin-bottom   : 2rem;
+    position        : relative;
+    border-radius   : 50%;
+    /* border       : 2px solid #fff; */
+    background-color: rgba(0, 0, 0, 0.4);
 
-    
+
 }
 
 
@@ -751,7 +751,7 @@ h6 {
 .bg-gradient {
     background   : linear-gradient(to right, #7f00ff, #e100ff);
     /* overflow-x: hidden; */
-    min-height: 70vh;
+    min-height   : 70vh;
 
     /* padding-top      : 10rem; */
     /* padding-bottom: 2rem; */
@@ -1647,7 +1647,20 @@ b {
 
 .wrap-lookup {
     background-color: #f9f5f3 !important;
+    opacity         : 0;
 
+}
+
+.app-info-container {
+    opacity: 0;
+}
+
+.wrap-lookup.animate__animated {
+    opacity: 1 !important;
+}
+
+.app-info-container.animate__animated {
+    opacity: 1 !important;
 }
 
 .container {
@@ -1813,14 +1826,15 @@ b {
     display: none;
 }
 
-.m-modal, .m-modal2 {
-    position  : fixed !important;
+.m-modal,
+.m-modal2 {
+    position     : fixed !important;
     /* opacity   : 1 !important; */
-    visibility: visible;
-    top       : 50% !important;
-    left      : 50% !important;
-    transform : translate(-50%, -50%) !important;
-    width     : 30%;
+    visibility   : visible;
+    top          : 50% !important;
+    left         : 50% !important;
+    transform    : translate(-50%, -50%) !important;
+    width        : 30%;
 
     background-color: #e0e0e0;
     padding         : 6rem;
@@ -1833,7 +1847,9 @@ b {
 
 
 @media only screen and (max-width: 78.15em) {
-    .m-modal, .m-modal2 {
+
+    .m-modal,
+    .m-modal2 {
         top  : 50%;
         width: 80%;
 
@@ -1904,9 +1920,10 @@ b {
     /* Firefox */
 }
 
-.pass-icon, .expired-icon {
-    font-size: 1.7rem !important;
-    margin-right: .6rem;
+.pass-icon,
+.expired-icon {
+    font-size     : 1.7rem !important;
+    margin-right  : .6rem;
     vertical-align: middle;
 }
 
@@ -1915,32 +1932,33 @@ b {
 
 
 .swal-modal {
-    width: 478px;
-    opacity: 0;
-    pointer-events: none;
-    background-color: #f9f5f3;
-    text-align: center;
-    border-radius: 5px;
-    position: static;
-    margin: 20px auto;
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    width                   : 478px;
+    opacity                 : 0;
+    pointer-events          : none;
+    background-color        : #f9f5f3;
+    text-align              : center;
+    border-radius           : 5px;
+    position                : static;
+    margin                  : 20px auto;
+    display                 : inline-block;
+    vertical-align          : middle;
+    -webkit-transform       : scale(1);
+    transform               : scale(1);
     -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    z-index: 10001;
-    transition: opacity .2s,-webkit-transform .3s;
-    transition: transform .3s,opacity .2s;
-    transition: transform .3s,opacity .2s,-webkit-transform .3s;
+    transform-origin        : 50% 50%;
+    z-index                 : 10001;
+    transition              : opacity .2s, -webkit-transform .3s;
+    transition              : transform .3s, opacity .2s;
+    transition              : transform .3s, opacity .2s, -webkit-transform .3s;
 }
 
-.swal-icon--success:after, .swal-icon--success:before {
+.swal-icon--success:after,
+.swal-icon--success:before {
     background: none !important;
 }
 
 .swal-icon--success__hide-corners {
-   background: none !important;
+    background: none !important;
 }
 
 .swal-footer {
@@ -1949,17 +1967,17 @@ b {
 
 .swal-button {
     background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
-    padding: 10px 24px;
-    margin         : 10px;
-    text-align     : center;
-    text-transform : uppercase;
-    transition     : 0.5s;
-    background-size: 200% auto;
-    color          : white;
-    box-shadow     : 0 0 20px #eee;
-    border-radius  : 10px;
-    display        : block;
-    border         : none !important;
+    padding         : 10px 24px;
+    margin          : 10px;
+    text-align      : center;
+    text-transform  : uppercase;
+    transition      : 0.5s;
+    background-size : 200% auto;
+    color           : white;
+    box-shadow      : 0 0 20px #eee;
+    border-radius   : 10px;
+    display         : block;
+    border          : none !important;
 }
 
 .swal-button:not([disabled]):hover {
@@ -1971,13 +1989,13 @@ b {
 
 input.filepicker::-webkit-calendar-picker-indicator {
     cursor: pointer;
-  }
+}
 
-  .filepicker {
-      margin-top: 2rem;
-      padding: 0 !important;
-      padding-left: 1rem !important;
-      padding-right: 1rem !important;
-      padding-top: 1rem !important;
-      padding-bottom: 1rem !important;
-  }
+.filepicker {
+    margin-top    : 2rem;
+    padding       : 0 !important;
+    padding-left  : 1rem !important;
+    padding-right : 1rem !important;
+    padding-top   : 1rem !important;
+    padding-bottom: 1rem !important;
+}
