@@ -1,5 +1,3 @@
-
-
 var isScrolled = false;
 
 $(window).scroll(function () {
@@ -7,7 +5,6 @@ $(window).scroll(function () {
     hH = $('#scroll-to').outerHeight(),
     wH = $(window).height(),
     wS = $(this).scrollTop();
-  console.log(hT - wH, wS);
   if (wS > hT + hH - wH) {
     isScrolled = true;
   }
