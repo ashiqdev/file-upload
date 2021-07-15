@@ -1,82 +1,17 @@
-// $(document).ready(function () {
-//   initFileUploader('#zdrop');
-//   function initFileUploader(target) {
-//     var previewNode = document.querySelector('#zdrop-template');
-//     previewNode.id = '';
-//     var previewTemplate = previewNode.parentNode.innerHTML;
-//     previewNode.parentNode.removeChild(previewNode);
 
-//     var zdrop = new Dropzone(target, {
-//       url: 'http:localost:3000/api',
-//       maxFiles: 10,
-//       maxFilesize: 30,
-//       previewTemplate: previewTemplate,
-//       previewsContainer: '#previews',
-//       clickable: '#upload-label',
-//     });
 
-//     zdrop.on('addedfile', function (file) {
-//       $('.preview-container').css('visibility', 'visible');
-//       // $('.filuploader-container').css('height', '30vh');
+var isScrolled = false;
 
-//       var windowSize = $(window).width();
-//       console.log({ windowSize });
-
-//       if (windowSize <= 414) {
-//         $('.filuploader-container').css('marginTop', '-140px');
-//       } else if (windowSize <= 1250) {
-//         $('.filuploader-container').css('marginTop', '-140px');
-//       } else {
-//         $('.filuploader-container').css('marginTop', '-190px');
-//       }
-
-//       $('.filuploader-container').animate({ height: '300px' }, 500);
-//       $('.fileuploader').css('marginTop', '22rem');
-//       $('.statistics-wrapper').css('paddingTop', '100px');
-//       $('.upload-icon').css('height', '50px');
-//       $('.tittle').hide();
-//       $('.upload-icon').css('top', '5%');
-//     });
-
-//     // window resize
-//     // $(window).on('resize', function () {
-//     //   var windowSize = $(window).width();
-
-//     //   const isCardAvaile = $('.preview-container').is(':visible');
-
-//     //   console.log({ isCardAvaile });
-
-//     //   if (windowSize <= 414) {
-//     //     $('.filuploader-container').css('marginTop', '-140px');
-//     //   } else if (windowSize <= 1250) {
-//     //     console.log('ki');
-//     //     $('.filuploader-container').css('marginTop', '-140px');
-//     //   } else {
-//     //     console.log('boro boro');
-//     //     $('.filuploader-container').css('marginTop', '-190px');
-//     //   }
-//     // });
-
-//     zdrop.on('totaluploadprogress', function (progress) {
-//       var progr = document.querySelector('.progress .determinate');
-//       if (progr === undefined || progr === null) return;
-
-//       progr.style.width = progress + '%';
-//     });
-
-//     zdrop.on('dragenter', function () {
-//       $('.fileuploader').addClass('active');
-//     });
-
-//     zdrop.on('dragleave', function () {
-//       $('.fileuploader').removeClass('active');
-//     });
-
-//     zdrop.on('drop', function () {
-//       $('.fileuploader').removeClass('active');
-//     });
-//   }
-// });
+$(window).scroll(function () {
+  var hT = $('#scroll-to').offset().top,
+    hH = $('#scroll-to').outerHeight(),
+    wH = $(window).height(),
+    wS = $(this).scrollTop();
+  console.log(hT - wH, wS);
+  if (wS > hT + hH - wH) {
+    isScrolled = true;
+  }
+});
 
 const btn = document.querySelector('.upload-icon');
 
@@ -87,7 +22,6 @@ btn.addEventListener('click', () => {
   $('.preview-container').css('display', 'block');
   $('.statistics-wrapper').css('display', 'none');
   $('.duplicate').css('display', 'block');
-
 
   var isVisible =
     document.querySelector('.preview-container').style.display === 'block';
@@ -121,22 +55,39 @@ btn.addEventListener('click', () => {
   //   $('#dangerous').remove();
   // }
 
+  const numberOne = document.querySelector('.number-one');
+  const numberTwo = document.querySelector('.number-two');
+  const numberThree = document.querySelector('.number-three');
+
+  const originalNumber1Flag = document.querySelector('#number1');
+
+  console.log({ check: originalNumber1Flag.innerText.trim() });
+
   if (!isClicked) {
-    $('.count-me').each(function () {
-      var $this = $(this);
-      isClicked = true;
-      jQuery({ Counter: 0 }).animate(
-        { Counter: $this.attr('data-stop') },
-        {
-          duration: 1600,
-          easing: 'swing',
-          step: function (now) {
-            $this.text(Math.ceil(now));
-          },
-        }
-      );
-    });
-  } else {
+    if (!isScrolled) {
+      $('.count-me').each(function () {
+        var $this = $(this);
+        isClicked = true;
+        jQuery({ Counter: 0 }).animate(
+          { Counter: $this.attr('data-stop') },
+          {
+            duration: 1600,
+            easing: 'swing',
+            step: function (now) {
+              $this.text(Math.ceil(now));
+            },
+          }
+        );
+      });
+    } else {
+      const originalNumber1 = document.querySelector('#number1');
+      const originalNumber2 = document.querySelector('#number2');
+      const originalNumber3 = document.querySelector('#number3');
+
+      numberOne.innerText = originalNumber1.innerText.trim();
+      numberTwo.innerText = originalNumber2.innerText.trim();
+      numberThree.innerText = originalNumber3.innerText.trim();
+    }
   }
 });
 
