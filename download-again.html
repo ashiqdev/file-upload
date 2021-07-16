@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Download-Again</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="download.css" />
   </head>
   <body>
@@ -121,7 +128,7 @@
       </div>
 
       <!-- info section -->
-      <!-- <div data-easy-reveal="fade-in-down" class="app-info-container">
+      <div data-easy-reveal="fade-in-down" class="app-info-container">
         <div data-aos="fade-right" class="info-card">
           <div class="card-img-container">
             <div data-aos="fade-right" class="anim">
@@ -192,19 +199,19 @@
             </p>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
 
     <!-- svg wave before footer -->
-    <div class="wave">
+    <!-- <div class="wave">
       <svg
-        id="svgs"
+        id="svg"
         viewBox="0 0 1440 400"
         xmlns="http://www.w3.org/2000/svg"
         class="transition duration-300 ease-in-out delay-150"
       >
         <defs>
-          <linearGradient id="gradie">
+          <linearGradient id="gradient">
             <stop offset="5%" stop-color="#7f00ffff"></stop>
             <stop offset="95%" stop-color="#e100ffff"></stop>
           </linearGradient>
@@ -213,12 +220,12 @@
           d="M 0,400 C 0,400 0,200 0,200 C 199.86666666666667,226.8 399.73333333333335,253.6 559,240 C 718.2666666666667,226.4 836.9333333333334,172.4 977,159 C 1117.0666666666666,145.6 1278.5333333333333,172.8 1440,200 C 1440,200 1440,400 1440,400 Z"
           stroke="none"
           stroke-width="0"
-          fill="url(#gradie)"
+          fill="url(#gradient)"
           class="transition-all duration-300 ease-in-out delay-150"
           transform="rotate(-180 720 200)"
         ></path>
       </svg>
-    </div>
+    </div> -->
 
     <!-- footer -->
     <div class="footer-container">
@@ -284,5 +291,12 @@
         <li class="footer-list-item">Privacy Policy</li>
       </ul>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

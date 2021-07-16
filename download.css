@@ -23,7 +23,10 @@ html {
 body {
     font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, noto sans, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji !important;
 
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
 }
+
+
 
 a {
     text-decoration: none;
@@ -129,10 +132,10 @@ li {
     }
 
     .informations-wrapper {
-        font-size      : 1.5rem;
-        justify-content: center;
-        align-items    : center;
-        margin         : 0 auto;
+        font-size      : 1.5rem !important;
+        justify-content: center !important;
+        align-items    : center !important;
+        margin         : 0 auto !important;
     }
 
     .dropbox {
@@ -140,11 +143,11 @@ li {
     }
 
     .file-infos h3 {
-        font-size: 1.8rem;
+        font-size: 1.8rem !important;
     }
 
     .second-part {
-        margin-left: 0;
+        margin-left: 0 !important;
     }
 
 
@@ -177,7 +180,8 @@ li {
     justify-content: center;
     padding-top: 10rem; */
     /* position: relative; */
-    height          : 100vh;
+    /* position: relative; */
+    height: 100vh;
 }
 
 .firstTwoContainer {
@@ -185,10 +189,11 @@ li {
 
     border-radius: 10px;
 
-    position : absolute;
-    top      : 50%;
-    left     : 50%;
-    transform: translate(-50%, -50%);
+    position     : absolute;
+    top          : 50%;
+    left         : 50%;
+    transform    : translate(-50%, -50%);
+    /* max-height: 482px !important; */
 
 
 }
@@ -402,6 +407,8 @@ a {
 }
 
 
+/* wave */
+
 .wave {
     margin-top: -130px;
     transform : rotate(180deg);
@@ -411,10 +418,27 @@ a {
 
 }
 
-.wave-main svg {
-    margin-top: -50px !important;
+@media only screen and (min-width: 1000px) {
+
+    .wave {
+        /* margin-top: -350.9px !important; */
+
+    }
+
 }
 
+@media only screen and (min-width: 1600px) {
+
+    .wave {
+        /* margin-top: -450.6px !important; */
+    }
+
+    .wave-main {
+        margin-top: -30px;
+    }
+
+
+}
 
 .footer-container {
     margin-top: -1rem;
@@ -440,8 +464,6 @@ a {
     margin-bottom: 2rem;
 }
 
-
-
 .footer-title {
     color        : #fff;
     font-size    : 1.6rem;
@@ -451,6 +473,33 @@ a {
 
 .footer-title:hover {
     text-decoration: none !important;
+}
+
+
+@media only screen and (min-width: 700px) {
+    .footer-container {
+        flex-direction   : row;
+        font-size        : 1.3rem;
+        text-align       : left;
+        /* margin-top    : -160px; */
+
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .footer-para {
+        font-size: 1.4rem;
+        width    : 30%;
+
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .footer-title {
+        font-size : 1.5rem;
+        text-align: left;
+
+    }
 }
 
 .footer-list-item {
@@ -481,7 +530,6 @@ a {
     text-decoration   : none;
 }
 
-
 .donate:hover {
     background-position: right center;
     /* change the direction of the change here */
@@ -489,20 +537,52 @@ a {
     text-decoration    : none;
 }
 
-
 .ml {
     margin-left: 0;
 }
 
-/* info section */
+@media only screen and (min-width: 700px) {
+    .ml {
+        margin-left: -450px;
+
+
+    }
+}
+
+.mr {
+    margin-right: 40px;
+}
+
+@media only screen and (min-width: 1600px) {
+    .mr {
+        margin-right: 200px;
+
+    }
+}
+
+
+.start {
+    margin-top   : 3rem;
+    /* text-align: center; */
+}
+
+@media only screen and (min-width: 1000px) {
+    .start {
+        margin-top: 0;
+    }
+}
+
+
+/* app info container */
 
 .app-info-container {
-    display        : flex;
-    width          : 80%;
-    margin         : 0 auto;
-    justify-content: space-between;
-    padding-bottom : 2rem;
-    margin-top     : -10rem !important;
+    display           : flex;
+    width             : 80%;
+    margin            : 0 auto;
+    justify-content   : space-between;
+    padding-bottom    : 2rem;
+    margin-bottom     : 3rem;
+    /* margin-top     : -10rem !important; */
 
 }
 
@@ -515,6 +595,7 @@ a {
     }
 }
 
+
 @media only screen and (max-width: 900px) {
     .app-info-container {
         /* display        : block; */
@@ -523,6 +604,17 @@ a {
         /* align-items : center; */
     }
 }
+
+
+@media only screen and (max-width: 500px) {
+    .app-info-container {
+        display        : block;
+        flex-direction : column;
+        justify-content: center;
+        /* align-items : center; */
+    }
+}
+
 
 .info-card {
     position     : relative;
@@ -550,6 +642,7 @@ a {
     }
 }
 
+
 .card-img-container img {
     /* position  : absolute; */
     height       : 300px;
@@ -567,11 +660,6 @@ a {
     color      : #161616;
 }
 
-.card-details .card_name {
-    font-size  : 26px;
-    font-weight: 500;
-    color      : #161616;
-}
 
 .card_name-para {
     font-size  : 14px !important;
@@ -581,10 +669,8 @@ a {
     text-align : justify;
 }
 
-.bold {
-    font-weight: bold;
-}
 
+/* lottie animations */
 .anim {
     width          : 100%;
     height         : 200px;
@@ -596,9 +682,4 @@ a {
     .anim {
         height: 300px;
     }
-}
-
-.tasty {
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-
 }
