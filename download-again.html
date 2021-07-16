@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download-Again</title>
+    <link rel="stylesheet" href="download.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a href="./index.html">
+        <div class="top__logo">
+          <img src="./img/logo.svg" alt="logo" />
+        </div>
+      </a>
+
+      <ul class="menu-items">
+        <li class="menu-item"><a href="">Menu1</a></li>
+        <li class="menu-item"><a href="">Menu2</a></li>
+        <li class="menu-item"><a href="">Menu3</a></li>
+        <li class="menu-item last"><a href="">Menu4</a></li>
+      </ul>
+    </header>
+
+    <!-- card in the middle -->
+
+    <div class="tasty">
+      <div class="center-parent">
+        <div class="keep-center">
+          <div class="download-container">
+            <div class="firstTwoContainer">
+              <div class="download-box">
+                <div class="first-part">
+                  <div class="file-name-container">
+                    <img class="file-icon" src="./img/document.svg" alt="" />
+                    <h3 class="file-name">DSCN0567.JPG</h3>
+                  </div>
+
+                  <img class="file-img" src="./img/phuto.jpg" alt="" />
+
+                  <div class="informations-wrapper">
+                    <div class="informations right-margin">
+                      <div class="file-info-container">
+                        <div class="file-infos">
+                          <img src="./img/database.svg" alt="" />
+                          <h3>File size</h3>
+                        </div>
+                        <p>2.24MB</p>
+                      </div>
+                    </div>
+
+                    <div class="informations upper-space">
+                      <div class="file-info-container">
+                        <div class="file-infos">
+                          <img src="./img/calendar.svg" alt="" />
+                          <h3>Uploaded</h3>
+                        </div>
+                        <p>2 Minutes Ago</p>
+                      </div>
+                    </div>
+
+                    <div class="informations upper-space right-margin">
+                      <div class="file-info-container">
+                        <div class="file-infos">
+                          <img src="./img/share.svg" alt="" />
+                          <h3>Share</h3>
+                        </div>
+
+                        <p>2 Minutes Ago</p>
+                      </div>
+                    </div>
+
+                    <div class="informations upper-space">
+                      <div class="file-info-container">
+                        <div class="file-infos">
+                          <img src="./img/document.svg" alt="" />
+                          <h3>File Type</h3>
+                        </div>
+                        <p>Other</p>
+                      </div>
+                    </div>
+
+                    <div class="informations upper-space">
+                      <div class="file-info-container">
+                        <div class="file-infos">
+                          <img src="./img/monitor.svg" alt="" />
+                          <h3>Resolutions</h3>
+                        </div>
+                        <p>3648 X 2736(2736p)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="second-part">
+                  <button class="button down-button">
+                    <p>Download(2.24MB)</p>
+                  </button>
+                  <div class="dropbox">
+                    <img src="./img/dropbox.svg" alt="" />
+                    <a>Save to Dropbox</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="clipboard">
+                <input
+                  class="copy-input"
+                  value="https://www.test.com"
+                  id="copyClipboard"
+                  readonly
+                />
+                <button class="copy-btn" id="copyButton" onclick="copy()">
+                  <i class="far fa-copy"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- info section -->
+      <!-- <div data-easy-reveal="fade-in-down" class="app-info-container">
+        <div data-aos="fade-right" class="info-card">
+          <div class="card-img-container">
+            <div data-aos="fade-right" class="anim">
+              <lottie-player
+                src="./drag.json"
+                background="transparent"
+                speed="1"
+                style="width: 100%; height: 100%"
+                autoplay
+                loop
+              ></lottie-player>
+            </div>
+          </div>
+
+          <div class="card-details">
+            <span class="card_name">Drag and Drop Friendly</span>
+            <p class="card_name-para">
+              The online sharing of files should be easy, so all you have to do
+              is drag and drop your files into our file uploader and we’ll
+              create a shareable URL in an instant.
+            </p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="card-img-container">
+            <div data-aos="fade-right" class="anim">
+              <lottie-player
+                src="./lottieUpload.json"
+                background="transparent"
+                speed="1"
+                style="width: 100%; height: 100%"
+                autoplay
+                loop
+              ></lottie-player>
+            </div>
+          </div>
+
+          <div class="card-details">
+            <span class="card_name">Multiple Uploads</span>
+            <p class="card_name-para">
+              Do you require more than one file upload at a time? No problem, by
+              creating a free account you can upload as many as 30 files at the
+              same time, without delay
+            </p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="card-img-container">
+            <div data-aos="fade-right" class="anim">
+              <lottie-player
+                src="./password.json"
+                background="transparent"
+                speed="1"
+                style="width: 100%; height: 100%"
+                autoplay
+                loop
+              ></lottie-player>
+            </div>
+          </div>
+
+          <div class="card-details last-entry">
+            <span class="card_name">No Registration Required</span>
+            <p class="card_name-para">
+              You always have the option to sign up for free to enjoy our full
+              file sharing features, but you can also simply upload and share
+              without registration, anonymously
+            </p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <!-- svg wave before footer -->
+    <div class="wave">
+      <svg
+        id="svgs"
+        viewBox="0 0 1440 400"
+        xmlns="http://www.w3.org/2000/svg"
+        class="transition duration-300 ease-in-out delay-150"
+      >
+        <defs>
+          <linearGradient id="gradie">
+            <stop offset="5%" stop-color="#7f00ffff"></stop>
+            <stop offset="95%" stop-color="#e100ffff"></stop>
+          </linearGradient>
+        </defs>
+        <path
+          d="M 0,400 C 0,400 0,200 0,200 C 199.86666666666667,226.8 399.73333333333335,253.6 559,240 C 718.2666666666667,226.4 836.9333333333334,172.4 977,159 C 1117.0666666666666,145.6 1278.5333333333333,172.8 1440,200 C 1440,200 1440,400 1440,400 Z"
+          stroke="none"
+          stroke-width="0"
+          fill="url(#gradie)"
+          class="transition-all duration-300 ease-in-out delay-150"
+          transform="rotate(-180 720 200)"
+        ></path>
+      </svg>
+    </div>
+
+    <!-- footer -->
+    <div class="footer-container">
+      <div class="footer-item">
+        <h4 class="footer-title">SUPPORT ME</h4>
+        <p class="footer-para">
+          If you find this service useful for checking DNS propagation, please
+          consider donating to help pay hosting costs and keeping the site up to
+          date.
+        </p>
+
+        <a class="donate" href="">Donate via Paypal</a>
+      </div>
+      <ul class="footer-item ml mr">
+        <li class="footer-list-item footer-title start">DNS TOOLS</li>
+        <li class="footer-list-item">DNS Checker</li>
+        <li class="footer-list-item">
+          <a href="./dns-lookup.html">DNS Lookup</a>
+        </li>
+        <li class="footer-list-item">What's My IP Address</li>
+        <li class="footer-list-item footer-title">DNS GUIDES</li>
+        <li class="footer-list-item">DNS Security</li>
+        <li class="footer-list-item">Flush DNS</li>
+        <li class="footer-list-item">Hosts File</li>
+      </ul>
+
+      <ul class="footer-item mr">
+        <li class="footer-list-item footer-title">DNS LOOKUP</li>
+        <li class="footer-list-item">A Record Lookup</li>
+        <li class="footer-list-item">AAAA Record Lookup</li>
+        <li class="footer-list-item">CAA Record Lookup</li>
+        <li class="footer-list-item">CNAME Record Lookup</li>
+        <li class="footer-list-item">MX Record Lookup</li>
+        <li class="footer-list-item">NS Record Lookup</li>
+        <li class="footer-list-item">PTR Record Lookup</li>
+        <li class="footer-list-item">SOA Record Lookup</li>
+        <li class="footer-list-item">SRV Record Lookup</li>
+        <li class="footer-list-item">TXT Record Lookup</li>
+      </ul>
+
+      <ul class="footer-item mr">
+        <li class="footer-list-item footer-title">ARTICLES & BLOG</li>
+        <li class="footer-list-item">
+          <a href="./articles.html">DNS Articles</a>
+        </li>
+        <li class="footer-list-item">Development Blog</li>
+        <li class="footer-list-item footer-title">DNS SERVERS</li>
+        <li class="footer-list-item">
+          <a href="./global.html">Global Dns Servers</a>
+        </li>
+        <li class="footer-list-item">Australian DNS Servers</li>
+        <li class="footer-list-item">France DNS Servers</li>
+        <li class="footer-list-item">New Zealand DNS Servers</li>
+        <li class="footer-list-item">United Kingdom DNS Servers</li>
+        <li class="footer-list-item">United States DNS Servers</li>
+      </ul>
+
+      <ul class="footer-item mr">
+        <li class="footer-list-item footer-title">Contact</li>
+        <li class="footer-list-item">Email: info@dns.io</li>
+        <li class="footer-list-item">Twitter: @whatsmydns</li>
+        <li class="footer-list-item footer-title">Legal</li>
+        <li class="footer-list-item">Privacy Policy</li>
+      </ul>
+    </div>
+  </body>
+</html>
