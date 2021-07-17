@@ -174,8 +174,6 @@ p {
     position           : relative;
     padding-left       : 3rem;
     padding-right      : 3rem;
-    background         : linear-gradient(to right, #7f00ff, #e100ff);
-    /* padding-top     : 3rem; */
     margin-top         : -3rem;
 
 }
@@ -749,13 +747,13 @@ h6 {
 }
 
 .bg-gradient {
-    background   : linear-gradient(to right, #7f00ff, #e100ff);
-    /* overflow-x: hidden; */
     min-height   : 70vh;
 
-    /* padding-top      : 10rem; */
-    /* padding-bottom: 2rem; */
-    /* margin-top: -1rem; */
+
+}
+
+.gradient-container {
+    background   : linear-gradient(to right, #7f00ff, #e100ff);
 
 }
 
