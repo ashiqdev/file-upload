@@ -189,7 +189,7 @@ li {
     /* position: relative; */
     /* height: 100vh; */
     /* width              : 100vw; */
-    max-width      : 550px;
+    max-width      : 700px;
     margin         : 0 auto;
     padding-bottom : 18rem;
     justify-content: center !important;
@@ -227,8 +227,8 @@ li {
     display                   : flex;
     padding-top               : 3rem;
     padding-bottom            : 3rem;
-    padding-left              : 1rem;
-    padding-right             : 1rem;
+    padding-left              : 3rem;
+    padding-right             : 3rem;
     border-top-left-radius    : 10px;
     border-top-right-radius   : 10px;
     /* 1st */
@@ -351,7 +351,7 @@ li {
 
 .copy-input {
     /* max-width         : 275px; */
-    /* width             : 100%; */
+    width             : 80%;
     cursor            : pointer;
     background-color  : #eaeaeb;
     border            : none;
@@ -363,9 +363,9 @@ li {
 
     padding           : 15px 45px 15px 15px;
     font-family       : 'Montserrat', sans-serif;
-    box-shadow        : 0 1px 15px #b8c6db;
+    /* box-shadow        : 0 1px 15px #b8c6db;
     -moz-box-shadow   : 0 1px 15px #b8c6db;
-    -webkit-box-shadow: 0 1px 15px #b8c6db;
+    -webkit-box-shadow: 0 1px 15px #b8c6db; */
 }
 
 .copy-input:focus {
@@ -388,7 +388,7 @@ li {
 }
 
 .copy-btn:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     cursor   : pointer;
 }
 
@@ -759,7 +759,7 @@ a {
 }
 
 .upper-container {
-    width: 50%;
+    width: 65%;
 }
 
 .button-container {
@@ -769,7 +769,7 @@ a {
     justify-content: center;
     align-items: center;
     align-items: center;
-    width: 50%;
+    width: 35%;
     border-top-right-radius: 10px;
 }
 

@@ -171,10 +171,10 @@ p {
 /* stats */
 
 .statistics-wrapper {
-    position           : relative;
-    padding-left       : 3rem;
-    padding-right      : 3rem;
-    margin-top         : -3rem;
+    position     : relative;
+    padding-left : 3rem;
+    padding-right: 3rem;
+    margin-top   : -3rem;
 
 }
 
@@ -747,13 +747,13 @@ h6 {
 }
 
 .bg-gradient {
-    min-height   : 70vh;
+    min-height: 70vh;
 
 
 }
 
 .gradient-container {
-    background   : linear-gradient(to right, #7f00ff, #e100ff);
+    background: linear-gradient(to right, #7f00ff, #e100ff);
 
 }
 
@@ -1825,8 +1825,13 @@ b {
     display: none;
 }
 
+.m-modal3:hidden {
+    display: none;
+}
+
 .m-modal,
-.m-modal2 {
+.m-modal2,
+.m-modal3 {
     position     : fixed !important;
     /* opacity   : 1 !important; */
     visibility   : visible;
@@ -1848,7 +1853,8 @@ b {
 @media only screen and (max-width: 78.15em) {
 
     .m-modal,
-    .m-modal2 {
+    .m-modal2,
+    .m-modal3 {
         top  : 50%;
         width: 80%;
 
@@ -2002,4 +2008,3 @@ input.filepicker::-webkit-calendar-picker-indicator {
 .duplicate {
     display: none;
 }
-

@@ -29,6 +29,7 @@ $(document).ready(function () {
 
 const modal = document.querySelector('.m-modal');
 const modal2 = document.querySelector('.m-modal2');
+const modal3 = document.querySelector('.m-modal3');
 
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
@@ -37,10 +38,16 @@ const closeModal = () => {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
   modal2.classList.add('hidden');
+  modal3.classList.add('hidden');
 };
 
 const closeExpiryModal = () => {
   modal2.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+const closeSettingsModal = () => {
+  modal3.classList.add('hidden');
   overlay.classList.add('hidden');
 };
 
@@ -53,6 +60,12 @@ const openExpiryModal = () => {
   modal2.classList.remove('hidden');
   overlay.classList.remove('hidden');
   // $('.datepicker').datepicker();
+};
+
+const openSettingsModal = () => {
+  console.log(modal3);
+  modal3.classList.remove('hidden');
+  overlay.classList.remove('hidden');
 };
 
 const passwordButton = document.querySelector('.password-button');
@@ -82,9 +95,22 @@ expirtyGenarator &&
   });
 
 const expiryCloseButton = document.querySelector('.danger-me');
+const settingloseButton = document.querySelector('.setting-me');
 
 expiryCloseButton.addEventListener('click', () => {
   closeExpiryModal();
+});
+
+settingloseButton.addEventListener('click', () => {
+  closeSettingsModal();
+});
+
+const settingButton = document.querySelector('.setting');
+
+settingButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log('hello');
+  openSettingsModal();
 });
 
 document.addEventListener('click', function (event) {

@@ -358,6 +358,7 @@ input[type=password]:focus {
     padding-top     : 1rem;
     padding-bottom  : 1rem;
     background-color: #e0e0e0;
+    margin-bottom: 12rem;
 }
 
 
