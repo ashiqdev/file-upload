@@ -23,7 +23,7 @@ html {
 body {
     font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, noto sans, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji !important;
 
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background-image: radial-gradient(circle farthest-corner at 12.3% 19.3%, rgba(85, 88, 218, 1) 0%, rgba(95, 209, 249, 1) 100.2%);
 }
 
 
@@ -113,6 +113,7 @@ li {
         justify-content: center;
         align-items    : center;
 
+
     }
 
     .clipboard {
@@ -195,18 +196,20 @@ li {
 }
 
 .video-container {
-    background                : linear-gradient(to right, #7f00ff, #e100ff);
-    border-bottom-left-radius : 10px;
-    border-bottom-right-radius: 10px;
-    font-size                 : 3rem;
-    color                     : white;
-    display                   : flex;
-    justify-content           : center;
-    padding-bottom            : 3rem;
+    background                   : #fff;
+    border-bottom-left-radius    : 10px;
+    border-bottom-right-radius   : 10px;
+    font-size                    : 3rem;
+    /* color                     : #777; */
+    display                      : flex;
+    flex-direction               : column;
+    justify-content              : center;
+    padding-bottom               : 3rem;
 }
 
 .video-container img {
-    /* width: 80%; */
+    width : 40%;
+    margin: 0 auto;
 }
 
 .firstTwoContainer {
@@ -214,25 +217,88 @@ li {
 
     border-radius: 10px;
 
-    /* position     : absolute; */
-    /* top          : 50%;
-    left         : 50%;
-    transform    : translate(-50%, -50%); */
-    /* max-height: 482px !important; */
-
+    background-image: linear-gradient( 65.5deg,  rgba(23,205,205,1) -15.1%, rgba(23,25,95,1) 71.5% );
 
 }
 
 .download-box {
-    background             : linear-gradient(to right, #7f00ff, #e100ff);
-    display                : flex;
-    padding-top            : 3rem;
-    padding-bottom         : 3rem;
-    padding-left           : 3rem;
-    padding-right          : 3rem;
-    border-top-left-radius : 10px;
-    border-top-right-radius: 10px;
+    /* background             : linear-gradient(to right, #7f00ff, #e100ff); */
+    display                   : flex;
+    padding-top               : 3rem;
+    padding-bottom            : 3rem;
+    padding-left              : 3rem;
+    padding-right             : 3rem;
+    border-top-left-radius    : 10px;
+    border-top-right-radius   : 10px;
+    /* 1st */
+    /* background             : linear-gradient(to right, #c04848, #480048); */
+    /* 2nd */
+    /* background             : linear-gradient(to right, #7474bf, #348ac7); */
+
+    /* 3rd */
+    /* background: linear-gradient(to right, #2193b0, #6dd5ed); */
+
+    /* 4th */
+    /* background: linear-gradient(to right, #c33764, #1d2671); */
+
+    /* 5th */
+
+    /* background: linear-gradient(to right, #8e2de2, #4a00e0); */
+
+    /* 6th */
+
+    /* background: linear-gradient(to right, #525252, #3d72b4); */
+
+    /* (day-2) */
+
+
+
+
 }
+
+
+.clipboard {
+    /* background: linear-gradient(to right, #7f00ff, #e100ff); */
+
+    /* 1st */
+    /* background: linear-gradient(to right, #c04848, #480048); */
+
+    /* 2nd */
+    /* background: linear-gradient(to right, #7474bf, #348ac7); */
+
+    /* 3rd */
+
+    /* background: linear-gradient(to right, #2193b0, #6dd5ed); */
+
+    /* 4th */
+
+    /* background: linear-gradient(to right, #c33764, #1d2671); */
+
+    /* 5th */
+    /* background: linear-gradient(to right, #8e2de2, #4a00e0); */
+
+    /* 6th */
+
+    /* (day-2) */
+
+    /* choise 1 */
+
+    position      : relative;
+    padding-bottom: 2rem;
+    padding-left  : 2rem;
+}
+
+.image-card-heading {
+    /* width: 100%; */
+    font-size     : 3.5rem;
+    margin        : 0 auto;
+    text-align    : center;
+    color         : #374151;
+    padding-top   : 2rem;
+    padding-bottom: 2rem;
+
+}
+
 
 .file-img {
     border-radius: 1rem;
@@ -280,14 +346,6 @@ li {
 
 }
 
-.clipboard {
-    background                : linear-gradient(to right, #7f00ff, #e100ff);
-    position                  : relative;
-    padding-bottom            : 2rem;
-    padding-left              : 2rem;
-    /* border-bottom-left-radius : 10px;
-    border-bottom-right-radius: 10px */
-}
 
 .dropbox {
     margin-top: 1rem;
