@@ -112,23 +112,24 @@ li {
         flex-direction : column;
         justify-content: center;
         align-items    : center;
+        padding-top: 8rem !important;
 
 
     }
 
     .clipboard {
 
-        background        : linear-gradient(to right, #7f00ff, #e100ff);
+
         position          : relative;
-        padding-bottom    : 2rem;
+        /* padding-bottom    : 2rem; */
         /* padding-left   : 2rem; */
         padding-left      : 0 !important;
         margin-left       : 0;
         /* margin         : 0 auto; */
         padding-right     : 1.2rem;
         display           : flex;
-        justify-content   : center;
-        align-items       : center;
+        /* justify-content   : center; */
+        /* align-items       : center; */
 
     }
 
@@ -188,7 +189,7 @@ li {
     /* position: relative; */
     /* height: 100vh; */
     /* width              : 100vw; */
-    max-width      : 700px;
+    max-width      : 550px;
     margin         : 0 auto;
     padding-bottom : 18rem;
     justify-content: center !important;
@@ -226,8 +227,8 @@ li {
     display                   : flex;
     padding-top               : 3rem;
     padding-bottom            : 3rem;
-    padding-left              : 3rem;
-    padding-right             : 3rem;
+    padding-left              : 1rem;
+    padding-right             : 1rem;
     border-top-left-radius    : 10px;
     border-top-right-radius   : 10px;
     /* 1st */
@@ -258,34 +259,16 @@ li {
 
 
 .clipboard {
-    /* background: linear-gradient(to right, #7f00ff, #e100ff); */
-
-    /* 1st */
-    /* background: linear-gradient(to right, #c04848, #480048); */
-
-    /* 2nd */
-    /* background: linear-gradient(to right, #7474bf, #348ac7); */
-
-    /* 3rd */
-
-    /* background: linear-gradient(to right, #2193b0, #6dd5ed); */
-
-    /* 4th */
-
-    /* background: linear-gradient(to right, #c33764, #1d2671); */
-
-    /* 5th */
-    /* background: linear-gradient(to right, #8e2de2, #4a00e0); */
-
-    /* 6th */
-
-    /* (day-2) */
-
-    /* choise 1 */
+    
 
     position      : relative;
+    /* padding-bottom: 2rem;
+    padding-left  : 1.7rem;
+    width: 90%;
+    margin: auto; */
     padding-bottom: 2rem;
-    padding-left  : 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .image-card-heading {
@@ -335,7 +318,6 @@ li {
 }
 
 .informations-wrapper {
-    width    : 50%;
     display  : flex;
     flex-wrap: wrap;
 }
@@ -368,14 +350,17 @@ li {
 
 
 .copy-input {
-    max-width         : 275px;
-    width             : 100%;
+    /* max-width         : 275px; */
+    /* width             : 100%; */
     cursor            : pointer;
     background-color  : #eaeaeb;
     border            : none;
     color             : #6c6c6c;
     font-size         : 14px;
     border-radius     : 5px;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+
     padding           : 15px 45px 15px 15px;
     font-family       : 'Montserrat', sans-serif;
     box-shadow        : 0 1px 15px #b8c6db;
@@ -394,9 +379,11 @@ li {
     font-size       : 18px;
     padding         : 6px 9px;
     border-radius   : 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
     border          : none;
     color           : #6c6c6c;
-    margin-left     : -50px;
+    /* margin-left     : -50px; */
     transition      : all .4s;
 }
 
@@ -473,7 +460,7 @@ a {
     flex-direction : column;
     align-items    : center;
     justify-content: center;
-    margin-left    : -200px;
+    /* margin-left    : -200px; */
 }
 
 
@@ -765,4 +752,48 @@ a {
     .anim {
         height: 300px;
     }
+}
+
+.upper-wrapper {
+    display: flex;
+}
+
+.upper-container {
+    width: 50%;
+}
+
+.button-container {
+    background: #1F2937;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    width: 50%;
+    border-top-right-radius: 10px;
+}
+
+
+@media only screen and (max-width: 78.15em) {
+    .upper-wrapper {
+        flex-direction: column;
+    }
+
+    .upper-container {
+        width: 100%;
+    }
+
+    .button-container {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+
+    .video-container {
+        padding-bottom: 8rem;
+    }
+
+    .copy-input {
+        box-shadow: none !important;
+    }
+
 }
