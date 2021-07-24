@@ -12,7 +12,40 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="download.css" />
+    <style>
+      * {
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      /* body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 30s ease infinite;
+      } */
+
+      /* @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      } */
+    </style>
   </head>
   <body>
     <header class="top">
@@ -32,189 +65,233 @@
 
     <!-- card in the middle -->
 
-    <div class="tasty">
-      <div class="center-parent">
-        <div class="keep-center">
-          <div class="download-container">
-            <div class="firstTwoContainer">
-              <div class="upper-wrapper">
-                <div class="upper-container">
-                  <div class="download-box">
-                    <div class="first-part">
-                      <div class="file-name-container">
-                        <img
-                          class="file-icon"
-                          src="./img/document.svg"
-                          alt=""
-                        />
-                        <h3 class="file-name">DSCN0567.JPG</h3>
-                      </div>
+    <div class="download-container">
+      <div class="">
+        <div class="grand-upper-wrapper">
+          <div class="upper-wrapper">
+            <div class="upper-container" style="border-top-left-radius: 10px">
+              <div class="download-box">
+                <div class="first-part">
+                  <div class="file-name-container">
+                    <span style="vertical-align: middle" class="material-icons"
+                      >description</span
+                    >
+                    <h3 class="file-name">DSCN0567.JPG</h3>
+                  </div>
 
-                      <div class="informations-wrapper">
-                        <div class="informations right-margin">
-                          <div class="file-info-container">
-                            <div class="file-infos">
-                              <img src="./img/database.svg" alt="" />
-                              <h3>File size</h3>
-                            </div>
-                            <p>2.24MB</p>
+                  <div class="informations-wrapper" style="max-width: 400px">
+                    <div class="informations right-margin">
+                      <div class="file-info-container">
+                        <div style="float: left">
+                          <div class="file-infos">
+                            <span
+                              style="vertical-align: middle"
+                              class="material-icons"
+                              >save</span
+                            >
                           </div>
                         </div>
-
-                        <div class="informations upper-space">
-                          <div class="file-info-container">
-                            <div class="file-infos">
-                              <img src="./img/calendar.svg" alt="" />
-                              <h3>Uploaded</h3>
-                            </div>
-                            <p>2 Minutes Ago</p>
-                          </div>
-                        </div>
-
-                        <div class="informations upper-space right-margin">
-                          <div class="file-info-container">
-                            <div class="file-infos">
-                              <img src="./img/share.svg" alt="" />
-                              <h3>Share</h3>
-                            </div>
-
-                            <p>2 Minutes Ago</p>
-                          </div>
-                        </div>
-
-                        <div class="informations upper-space">
-                          <div class="file-info-container">
-                            <div class="file-infos">
-                              <img src="./img/document.svg" alt="" />
-                              <h3>File Type</h3>
-                            </div>
-                            <p>Other</p>
-                          </div>
-                        </div>
-
-                        <div class="informations upper-space">
-                          <div class="file-info-container">
-                            <div class="file-infos">
-                              <img src="./img/monitor.svg" alt="" />
-                              <h3>Resolutions</h3>
-                            </div>
-                            <p>3648 X 2736(2736p)</p>
-                          </div>
+                        <div style="float: left; padding-left: 10px">
+                          <h3>Size</h3>
+                          <p>2.42 MB</p>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="clipboard">
-                    <input
-                      class="copy-input"
-                      value="https://www.test.com"
-                      id="copyClipboard"
-                      readonly
-                    />
-                    <button class="copy-btn" id="copyButton" onclick="copy()">
-                      <i class="far fa-copy"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="button-container">
-                  <div class="second-part">
-                    <button class="button down-button">
-                      <p>Download(2.24MB)</p>
-                    </button>
-                    <div class="dropbox">
-                      <img src="./img/dropbox.svg" alt="" />
-                      <a>Save to Dropbox</a>
+                    <div class="informations upper-space right-margin">
+                      <div class="file-info-container">
+                        <div style="float: left">
+                          <div class="file-infos">
+                            <span
+                              style="vertical-align: middle"
+                              class="material-icons"
+                              >event</span
+                            >
+                          </div>
+                        </div>
+                        <div style="float: left; padding-left: 10px">
+                          <h3>Uploaded</h3>
+                          <p>2 Minutes Ago</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="informations upper-space margin-left">
+                      <div class="file-info-container">
+                        <div style="float: left">
+                          <div class="file-infos">
+                            <span
+                              style="vertical-align: middle"
+                              class="material-icons"
+                              >source</span
+                            >
+                          </div>
+                        </div>
+                        <div style="padding-left: 10px; margin-left: 30px">
+                          <h3>File Type</h3>
+                          <p>Other</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="informations upper-space">
+                      <div class="file-info-container">
+                        <div style="float: left">
+                          <div class="file-infos">
+                            <span
+                              style="vertical-align: middle"
+                              class="material-icons"
+                              >fullscreen</span
+                            >
+                          </div>
+                        </div>
+                        <div style="float: left; padding-left: 10px">
+                          <h3>Resolution</h3>
+                          <p>1920 x 1080</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="informations upper-space right-margin">
+                      <div class="file-info-container">
+                        <div style="float: left">
+                          <div class="file-infos">
+                            <span
+                              style="vertical-align: middle"
+                              class="material-icons"
+                              >share</span
+                            >
+                          </div>
+                        </div>
+                        <div style="float: left; padding-left: 10px">
+                          <h3>Share</h3>
+                          <p>T|F|G</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="video-container">
-                <h3 class="image-card-heading">Image</h3>
-                <img class="file-img" src="./img/phuto.jpg" alt="" />
+
+              <div class="clipboard">
+                <input
+                  class="copy-input"
+                  value="https://www.test.com"
+                  id="copyClipboard"
+                  readonly
+                />
+                <button class="copy-btn" id="copyButton" onclick="copy()">
+                  <i class="far fa-copy"></i>
+                </button>
+              </div>
+            </div>
+            <div class="button-container">
+              <div class="second-part">
+                <button class="button down-button">
+                  <p>
+                    <span style="vertical-align: middle" class="material-icons"
+                      >cloud_download</span
+                    >
+                    Download
+                  </p>
+                </button>
+                <div style="display: none" class="dropbox">
+                  <img src="./img/dropbox.svg" alt="" />
+                  <a>Save to Dropbox</a>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="content-container">
+          <h3 class="image-card-heading">
+            <span class="material-icons chevron"
+              >keyboard_arrow_down</span
+            >
+          </h3>
+          <img src="./img/phuto.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- info section -->
+    <div data-easy-reveal="fade-in-down" class="app-info-container">
+      <div data-aos="fade-right" class="info-card">
+        <div class="card-img-container">
+          <div data-aos="fade-right" class="anim">
+            <lottie-player
+              src="./drag.json"
+              background="transparent"
+              speed="1"
+              style="width: 100%; height: 100%"
+              autoplay
+              loop
+            ></lottie-player>
+          </div>
+        </div>
+
+        <div class="card-details">
+          <span class="card_name">Drag and Drop Friendly</span>
+          <p class="card_name-para">
+            The online sharing of files should be easy, so all you have to do is
+            drag and drop your files into our file uploader and we’ll create a
+            shareable URL in an instant.
+          </p>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="card-img-container">
+          <div data-aos="fade-right" class="anim">
+            <lottie-player
+              src="./lottieUpload.json"
+              background="transparent"
+              speed="1"
+              style="width: 100%; height: 100%"
+              autoplay
+              loop
+            ></lottie-player>
+          </div>
+        </div>
+
+        <div class="card-details">
+          <span class="card_name">Multiple Uploads</span>
+          <p class="card_name-para">
+            Do you require more than one file upload at a time? No problem, by
+            creating a free account you can upload as many as 30 files at the
+            same time, without delay
+          </p>
         </div>
       </div>
 
-      <!-- info section -->
-      <div data-easy-reveal="fade-in-down" class="app-info-container">
-        <div data-aos="fade-right" class="info-card">
-          <div class="card-img-container">
-            <div data-aos="fade-right" class="anim">
-              <lottie-player
-                src="./drag.json"
-                background="transparent"
-                speed="1"
-                style="width: 100%; height: 100%"
-                autoplay
-                loop
-              ></lottie-player>
-            </div>
-          </div>
-
-          <div class="card-details">
-            <span class="card_name">Drag and Drop Friendly</span>
-            <p class="card_name-para">
-              The online sharing of files should be easy, so all you have to do
-              is drag and drop your files into our file uploader and we’ll
-              create a shareable URL in an instant.
-            </p>
-          </div>
-        </div>
-        <div class="info-card">
-          <div class="card-img-container">
-            <div data-aos="fade-right" class="anim">
-              <lottie-player
-                src="./lottieUpload.json"
-                background="transparent"
-                speed="1"
-                style="width: 100%; height: 100%"
-                autoplay
-                loop
-              ></lottie-player>
-            </div>
-          </div>
-
-          <div class="card-details">
-            <span class="card_name">Multiple Uploads</span>
-            <p class="card_name-para">
-              Do you require more than one file upload at a time? No problem, by
-              creating a free account you can upload as many as 30 files at the
-              same time, without delay
-            </p>
+      <div class="info-card">
+        <div class="card-img-container">
+          <div data-aos="fade-right" class="anim">
+            <lottie-player
+              src="./security.json"
+              background="transparent"
+              speed="1"
+              style="width: 100%; height: 100%"
+              autoplay
+              loop
+            ></lottie-player>
           </div>
         </div>
 
-        <div class="info-card">
-          <div class="card-img-container">
-            <div data-aos="fade-right" class="anim">
-              <lottie-player
-                src="./password.json"
-                background="transparent"
-                speed="1"
-                style="width: 100%; height: 100%"
-                autoplay
-                loop
-              ></lottie-player>
-            </div>
+        <div class="card-details last-entry">
+          <div class="card_name text-center" style="padding-bottom: 10px">
+            Security
           </div>
-
-          <div class="card-details last-entry">
-            <span class="card_name">No Registration Required</span>
-            <p class="card_name-para">
-              You always have the option to sign up for free to enjoy our full
-              file sharing features, but you can also simply upload and share
-              without registration, anonymously
-            </p>
-          </div>
+          <p class="card_name-para">
+            We regularly remove malicious files based on reports that are sent
+            to us, but we strongly recommend that you're cautious and scan file
+            extensions that can be potentially malicious (.dmg, .exe, etc).
+          </p>
         </div>
       </div>
     </div>
 
     <!-- svg wave before footer -->
-    <!-- <div class="wave">
+    <div class="wave">
       <svg
         id="svg"
         viewBox="0 0 1440 400"
@@ -223,8 +300,8 @@
       >
         <defs>
           <linearGradient id="gradient">
-            <stop offset="5%" stop-color="#7f00ffff"></stop>
-            <stop offset="95%" stop-color="#e100ffff"></stop>
+            <stop offset="0%" stop-color="#4dcece"></stop>
+            <stop offset="100%" stop-color="#0ca7e3"></stop>
           </linearGradient>
         </defs>
         <path
@@ -236,7 +313,7 @@
           transform="rotate(-180 720 200)"
         ></path>
       </svg>
-    </div> -->
+    </div>
 
     <!-- footer -->
     <div class="footer-container">
@@ -296,13 +373,25 @@
 
       <ul class="footer-item mr">
         <li class="footer-list-item footer-title">Contact</li>
-        <li class="footer-list-item">Email: info@dns.io</li>
+        <li class="footer-list-item">
+          Email:
+          <a
+            href="/cdn-cgi/l/email-protection"
+            class="__cf_email__"
+            data-cfemail="cfa6a1a9a08faba1bce1a6a0"
+            >[email&#160;protected]</a
+          >
+        </li>
         <li class="footer-list-item">Twitter: @whatsmydns</li>
         <li class="footer-list-item footer-title">Legal</li>
         <li class="footer-list-item">Privacy Policy</li>
       </ul>
     </div>
 
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
