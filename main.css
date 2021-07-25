@@ -1,0 +1,237 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing        : inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing        : border-box;
+    font-size         : 62.5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 78.15em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family      : -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, noto sans, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji !important;
+    font-weight      : 400;
+    line-height      : 1.6;
+    background-size  : cover;
+    background-repeat: no-repeat;
+    min-height       : calc(100vh - 2 * 4vw);
+    position         : relative;
+    overflow-x       : hidden;
+    background-color : #F3F4F6;
+}
+
+/* navbar */
+
+.navbar {
+    padding-top: 1rem;
+}
+
+.main-wrapper {
+    max-width: 1200px;
+    margin   : 0 auto;
+}
+
+.nav-items {
+    display        : flex;
+    justify-content: space-between;
+    font-size      : 1.6rem;
+    align-items    : center;
+}
+
+.nav-items ul {
+    display        : flex;
+    list-style-type: none;
+}
+
+.nav-items ul li {
+    color: #4338CA;
+}
+
+.nav-item-secondary ul li:not(:last-child),
+.nav-item-tertiary ul li:not(:last-child) {
+    margin-right: 2rem;
+}
+
+/* dropzone */
+
+.dropzone {
+    background     : url(./img/bluebg2png.png);
+    background-size: cover;
+    margin-top     : 3rem;
+    text-align     : center;
+    padding-top    : 5rem;
+    border-radius  : 30px;
+}
+
+.cloud-card-container {
+    /* height: 70px; */
+    width: 70px;
+}
+
+.cloud-card {
+    /* background: #fff;
+    padding-top: 1rem; */
+    background: #fff;
+}
+
+.image-card {
+    display       : flex;
+    align-items   : center;
+    font-size     : 1.5rem;
+    color         : #4338CA;
+    background    : #fff;
+    padding-top   : 1rem;
+    padding-bottom: 1rem;
+    padding-left  : 2rem;
+    padding-right : 2rem;
+
+    border-radius: 50px;
+    background   : #fff;
+    box-shadow   : 20px 20px 60px #E5E7EB,
+        -20px -20px 60px #ffffff;
+}
+
+.image-card img {
+    height      : 40px;
+    /* height   : 70px;
+    width       : 130px; */
+    margin-right: 10px;
+}
+
+.upper-container {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    max-width      : 800px;
+    margin         : 0 auto;
+}
+
+.lower-container {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    max-width      : 800px;
+    margin         : 0 auto;
+}
+
+.big-header-container {
+    font-size  : 3.5rem;
+    color      : #3730A3;
+    font-weight: bolder;
+}
+
+.big-header-para {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.big-header span {
+    display: block;
+}
+
+.hero-header {
+    line-height: 0.7;
+}
+
+.music-card {
+    padding-top   : 1rem;
+    padding-bottom: 1rem;
+    padding-left  : 2rem;
+    padding-right : 2rem;
+    background    : #fff;
+    border-radius : 10px;
+    transform     : translateX(35px);
+
+    border-radius: 20px;
+    background   : #fff;
+    box-shadow   : 20px 20px 60px #E5E7EB,
+        -20px -20px 60px #ffffff;
+}
+
+.cloud-card {
+    padding-top   : 1rem;
+    padding-bottom: 1rem;
+    padding-left  : 2rem;
+    padding-right : 2rem;
+    background    : #fff;
+    border-radius : 10px;
+    transform     : translateX(-35px);
+
+    border-radius: 20px;
+    background   : #fff;
+    box-shadow   : 20px 20px 60px #E5E7EB,
+        -20px -20px 60px #ffffff;
+}
+
+
+
+.music-card img,
+.cloud-card img {
+    height  : 50px;
+    /* width: 130px; */
+}
+
+.password-card {
+    padding-top   : 1rem;
+    padding-bottom: 1rem;
+    padding-left  : 2rem;
+    padding-right : 2rem;
+    background    : #fff;
+    border-radius : 10px;
+
+    border-radius: 20px;
+    background   : #fff;
+    box-shadow   : 20px 20px 60px #E5E7EB,
+        -20px -20px 60px #ffffff;
+}
+
+.password-card img {
+    height: 50px;
+
+}
+
+.drop-area {
+    background   : #fff;
+    padding      : 3rem;
+    border-radius: 10px;
+    transform    : translateY(65px);
+    font-size    : 1.5rem;
+
+    border-radius: 20px;
+    background   : #fff;
+    box-shadow   : 20px 20px 60px #E5E7EB,
+        -20px -20px 60px #ffffff;
+    /* min-width: 300px; */
+
+}
+
+.drop-area-container {
+    border       : 2px dashed #eee;
+    padding      : 3rem;
+    border-radius: 10px;
+}
+
+
+/* preview-card */
+
+.preview-container {
+    display: none;
+}
