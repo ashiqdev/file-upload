@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="nav-item-logo" style="text-align: center; padding-top: 10px">
+        <a href="./index-again.html">
+          <div class="top__logo">
+            <img
+              style="width: 140px"
+              src="https://i.imgur.com/EV27IHQ.png"
+              alt="logo"
+            />
+          </div>
+        </a>
+      </div>
+
+      <nav class="navbar">
+        <div class="nav-items">
+          <!-- 1st -->
+
+          <!-- 2nd -->
+          <div class="nav-item-secondary">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Pricing</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Terms</a></li>
+            </ul>
+          </div>
+          <!-- 3rd -->
+          <div class="nav-item-tertiary">
+            <ul>
+              <li><a href="">Login</a></li>
+              <li><a href="">Sign Up</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- dropzone -->
+      <div class="dropzone">
+        <div class="upper-container">
+          <!-- 1st -->
+          <div class="image-card">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player
+              src="https://assets5.lottiefiles.com/packages/lf20_z9e6qbup.json"
+              background="transparent"
+              speed="1"
+              style="width: 50px; height: 50px"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+
+          <!-- 2nd -->
+          <div class="big-header-container">
+            <div class="big-header">
+              <span class="hero-header">Secure Cloud Storage &</span>
+              <span>Communication</span>
+            </div>
+            <p class="big-header-para">
+              Grab Premium Account today Check out our awesome deal
+            </p>
+          </div>
+
+          <!-- 3rd -->
+          <div class="cloud-card">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player
+              src="https://assets3.lottiefiles.com/packages/lf20_kwi9lo1z.json"
+              background="transparent"
+              speed="1"
+              style="width: 50px; height: 50px"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+        </div>
+
+        <div class="lower-container">
+          <div class="music-card">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player
+              src="https://assets3.lottiefiles.com/packages/lf20_qrrr2ybu.json"
+              background="transparent"
+              speed="1"
+              style="width: 50px; height: 50px"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+
+          <div class="drop-area">
+            <div class="border">
+              <div
+                class="drop-instructions"
+                style="padding-bottom: 10px; color: #4c9ca2"
+              >
+                Drag & Drop files here to upload
+              </div>
+
+              <button class="browseButton">Browse Files</button>
+
+              <style>
+                .browseButton {
+                  padding: 15px;
+                  background-color: white;
+                  border: 1px solid #e3e3e3;
+                  border-radius: 10px;
+                  transition: background-color 1.5s ease;
+                }
+
+                .browseButton:hover {
+                  background-color: #e3e3e3;
+                }
+              </style>
+            </div>
+          </div>
+
+          <div class="password-card">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player
+              src="https://assets2.lottiefiles.com/packages/lf20_iojr5dnw.json"
+              background="transparent"
+              speed="1"
+              style="width: 80px; height: 80px"
+              autoplay
+            ></lottie-player>
+          </div>
+        </div>
+      </div>
+
+      <div class="preview-container">
+        <div class="preview-file-header">
+          <img src="./img/new-file-icon.svg" alt="" />
+          <div>
+            <h3>
+              <span class="file-title">RedTech_Modern</span>
+              <span class="light">.zip</span>
+            </h3>
+            <span class="light">53MB</span>
+            <span class="dot">.</span>
+            <span class="light">ZIP</span>
+          </div>
+        </div>
+
+        <!-- horizontal line -->
+        <!-- <hr /> -->
+
+        <div class="password-container">
+          <img src="./img/new-small-lock-icon.svg" alt="" />
+          <p>Set Password</p>
+          <input class="password-text" type="password" />
+        </div>
+
+        <div class="expiry-container">
+          <img src="./img/new-clock-icon.svg" alt="" />
+
+          <p>Expired After</p>
+
+          <div class="expiry-select-one">
+            <select name="date" id="date" class="custom-select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+
+          <span class="or">or</span>
+
+          <div class="expiry-select-two">
+            <select name="download" id="download" class="custom-select">
+              <option value="1">10x</option>
+              <option value="2">20x</option>
+              <option value="3">30x</option>
+              <option value="4">40x</option>
+              <option value="5">50x</option>
+              <option value="6">60x</option>
+              <option value="7">70x</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="upload-btn">Upload This file</button>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="./new.js"></script>
+</html>
